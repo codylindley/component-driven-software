@@ -1,3 +1,3 @@
-# Compoent Driven Software
+# Component Driven Software
 
-see: [componentdrivensoftware.com](componentdrivensoftware.com)
+see: [componentdrivensoftware.com](http://www.componentdrivensoftware.com)
