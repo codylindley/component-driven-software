@@ -104,12 +104,13 @@
 
         <p>
           <strong>Processes:</strong>
-          How will components be defined? When will components be defined? When are they built? How does this fit into
-          your development process that exists today?
+          How will components be defined? When will components be defined? When are they built? How will updates to
+          components be managed? How does this fit into
+          your development process that exists today? Do component collections accept contributions?
         </p>
 
         <p>
-          <strong>Strategies/architectures:</strong>
+          <strong>Strategies/Architectures:</strong>
           Do you need top down components, bottom up, or both?
           Will you build presentational components and nonpresentational components? Will you build primitive UI
           components as well as domain UI components. How will you organize your component sets? By product/application?
@@ -118,9 +119,10 @@
 
         <p>
           <strong>People/Roles:</strong>
-          Who is responsible for defining components (designer, developers, both?). Who is responsible for building
+          Who is responsible for defining components (designer, developers, both?). Who is responsible for building and
+          documenting
           components (UI developers, application developers, both?). Who is responsible for maintaining the component
-          definitions and component implementations? Will you construct a focused team around components?
+          specifications and component implementations? Will you construct a focused team around components?
         </p>
 
         <p>
@@ -152,10 +154,9 @@
             a component, not the component themselves.</li>
           <li>UI components are extracted from feature specifications by designers (worse case developers) and specified
             separately from feature specifications.</li>
-          <li>UI components are viewed as a game of composition. In other words, UI's are assembled during development
-            from custom pre-built pre-tested UI components that have fallen out of traditional UI mockups/screens. In
-            other words, when developers go to build the UI of an application they don't start from nothing, they take
-            the pre-built components to build out the screens/views within the application.</li>
+          <li>Components are viewed as a game of composition. When components, especially UI components are view in
+            this way application developers can build the bulk of an application from custom pre-built, heavily
+            documented, and pre-test UI components that have fallen out of traditional UI mockups/screens. </li>
         </ul>
 
         <p>Disregarding one of the tenets mentioned above will erode the value of component-driven systems relatively
@@ -187,10 +188,12 @@
             href="https://react-spectrum.adobe.com/react-stately/index.html">React Stately</a>
         </p>
 
-        <h3>Examples of pre-built generic component collections <br> <small>
-            (Use the examples below as model on which to construct your
-            own set of bottom-up components specific to your product or application)
-          </small> </h3>
+        <h3>Examples of top-down generic component collections</h3>
+
+        <p>
+          Use the examples below as model on which to construct your
+          own set of bottom-up components specific to your product or application.
+        </p>
 
         <ul>
           <li><a href="https://ant.design/components/overview/" target="_blank" rel="nofollow noopener noreferrer"
@@ -213,8 +216,11 @@
               rel="nofollow noopener noreferrer" class="sbdocs sbdocs-a css-19nbuh3">Spectrum</a></li>
         </ul>
 
+        <h3>Examples of bottom-up component collections</h3>
 
-        <h3>Words</h3>
+        ?
+
+        <h3>Written Explanations</h3>
 
         <ul>
           <li><a href="https://www.componentdriven.org/">Component Driven User Interfaces</a> &amp; <a
@@ -232,7 +238,7 @@
               Harmony: A New Tool To Create and Collaborate on Independent Node.js Components</a></li>
         </ul>
 
-        <h3>Videos</h3>
+        <h3>Verbal Presentations</h3>
 
         <ul>
           <li><a href="https://www.youtube.com/watch?v=yDjTcBKXKDE&amp;t=2s">Build Components Not
@@ -285,7 +291,8 @@
 
         <h3>Domain UI/Presentational Components</h3>
 
-        <p>A component that does not have any obvious UI reuse but exists to provide application developers with more
+        <p>A component, typically constructed for a specific application or product that does not have any obvious UI
+          reuse but exists to provide application developers with more
           than just simplistic and generic reusable components (i.e., a unique view or specific "organism/molecule" to
           borrow from Atomic Design). These components are often complex and take up a lot of the user's attention and
           view within a user interface (e.g., an entire header or footer or a complex domain-specific search UI).</p>
@@ -324,6 +331,15 @@
       <div id="chapter5" class="chapter">
 
         <h2>FAQ</h2>
+
+        <h3>Wait, are you saying build unique collections of components for each product or applicatioin?</h3>
+
+        <p>Yes. This exactly the notion at the heart of component driven development (i.e. bottom up components). By way
+          of a components driven
+          system any organization should be able to create a collection of components specific to the needs of each
+          product or application in a trivial amount of team guaranteeing the quality and integrity of the components
+          well into the future.
+        </p>
 
         <h3>Isn't this just window dressing around the idea of leveraging UI Toolkits?</h3>
 
