@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <script src="js/prism.js"></script>
+    <title>Component Driven Software</title>
+  </head>
+
+  <body>
+    <div id="menu"><div id="toc"></div></div>
+
+    <div id="panel">
+      <div id="menuButton">|||</div>
+
+      <div id="bookPadding">
+        <h1>
+          Component Driven Software
+        </h1>
+
+        <h3 style="margin-top:0px">by <a href="https://www.codylindley.com">Cody Lindley</a></h3>
+        <section>
+          Component Driven Software is a catch-all term used to describe the methodologies and tools for subdividing part or all of an application into independently specified and managed presentational (i.e., UI components) and nonpresentational composable components.  Components are built, versioned, and tested separately from application development concerns and in lockstep with Visual Design, Interaction Design, and User Experience design requirements to ensure UI quality and avoid impossible to maintain monolithic software applications.
+        </section>
+
+        <hr />
+
+        <div id="chapter1" class="chapter">
+          <h2>1 : Why Component-driven Software?</h2>
+
+          <p>The following points explain why an organization might consider adopting the tenants of Component Driven Software:</p>
+
+          <ul><li>
+            Applications built from component tree architectures (e.g., Vue, React, Angular, etc..) can result in thousands of unversioned built-as-needed undocumented and disorganized components resulting in monolithic front-end applications that are slow to build, have subpar UI's, and are often difficult to maintain and evolve. Ideally, what is needed is a system in which most if not all the components, especially UI components, become first-class design citizens and are constructed in isolation, self-contained, versioned, and given the proper documentation and isolated testing routines.
+          </li>
+          <li>
+            Front-end application developers carry too much of the workload when building user-centered, maintainable, cross-device, cross-platform, front-end applications. They can be responsible for architecting the application, data gathering and handling, developing and testing all the components, including all UI components. For complex front-end applications, application developers have too much responsibility. As a result, the UI can become a second-class citizen or afterthought to application developers. Ideally, the burden of application development needs to be distributed to UI developers who are focused on building, testing, and maintaining UI components in a walled-off garden while application developers can simultaneously be working on application concerns.
+          </li>
+          <li>
+            Organizations all too often fail to set up the proper systems and owners around design practices and development practices that facilitate sophisticated abstractions and correctly scoped reusable materials. Ideally, organizations should erect "Design System(s)" that fuel a "Component Driven System" that fuels application development. These solutions require appropriately skilled owners that play a particular role within an organization's design and engineering practices.
+          </li></ul>
+  
+        </div>
+
+        <div id="chapter2" class="chapter">
+          <h2>2 : How is Component Driven Software Done?</h2>
+
+          <p>Component-driven software is built from a component-driven system. A component-driven system is a system instituted by an organization made up of the <strong>goals</strong>, <strong>processes</strong>, <strong>strategies/architectures</strong>, <strong>people/roles</strong>, and <strong>tools</strong> used by the organization to birth and nurture independently built components.</p>
+
+<p>
+  <strong>Goals:</strong>
+  Speed development? Fortify UI's? Visual unification? Separate application development from UI development? Avoid monolithic unmaintainable applications that have to be re-built too often? Reuse?
+</p>
+
+<p>
+  <strong>Processes:</strong>
+  How will components be defined? When will components be defined? When are they built? How does this fit into your development process that exists today?
+</p>
+
+<p>
+  <strong>Strategies/architectures:</strong>
+  Do you need top down components, bottom up, or both?
+  Will you build presentational components and nonpresentational components? Will you build primitive UI components as well as domain UI components. How will you organize your component sets? By product/application? By device? By platform? By all three?
+</p>
+
+<p>
+  <strong>People/Roles:</strong>
+  Who is responsible for defining components (designer, developers, both?). Who is responsible for building components (UI developers, application developers, both?). Who is responsible for maintaining the component definitions and component implementations? Will you construct a focused team around components?
+</p>
+
+<p>
+  <strong>Tools:</strong>
+  Which tools will you employ, and how will they be utilized to support the system?
+</p>
+
+<p>There is no one way to go about building component-driven software or constructing a component-driven system. No two organizations will likely ever erect the same component-driven system to build component-driven software. However, there are some foundational tenets of building component-driven software using a component-driven system.</p>
+
+<p>Common tenets of a component-driven software are:</p>
+
+<ul>
+  <li>Components get developed in isolation, tested in isolation, and are independently versioned using semver.</li>
+  <li>Components become individual packages and get distributed using a public or private module repository (e.g., npm) for installing and uninstalling versioned module packages.</li>
+  <li>Component-driven systems are engineered so that components within the system can be consumed to create other richer components within the system (i.e., Domain UI components are composed of Primitive UI components or said another way, Primitive UI components can be gathered together in order to produce Domain UI components).</li>
+  <li>Component-driven development is a separate concern from the concerns of application development.</li>
+  <li>Components are unit tested (e.g., Jest), visually tested (e.g., Percy), and functionally tested (e.g., Cypress) before they are consumed into an application runtime. Applications then test the implementation of a component, not the component themselves.</li>
+  <li>UI components are extracted from feature specifications by designers (worse case developers) and specified separately from feature specifications.</li>
+</ul>
+
+<p>Disregarding one of the tenets mentioned above will erode the value of component-driven systems relatively quickly.</p>
+
+  
+        </div>
+      </div>
+    </div>
+
+    <script src="js/slideout.min.js "></script>
+    <script src="js/jquery-3.3.1.slim.min.js "></script>
+
+    <script>
+      // Create slide out TOC
+      var slideout = new Slideout({
+        panel: document.getElementById("panel"),
+        menu: document.getElementById("menu"),
+        padding: 356,
+        tolerance: 70
+      });
+
+      // Create TOC dynamically from content
+      jQuery(".chapter").each(function(index) {
+        jQuery("h2", "#chapter" + (index + 1)).each(function(i) {
+          $(this).attr("id", index + 1);
+          $("#toc").append(
+            '<h5><a href="#' + (index + 1) + '">' + $(this).html() + "</a></h5>"
+          );
+        });
+
+        jQuery("h3", "#chapter" + (index + 1)).each(function(i) {
+          $(this).attr("id", index + 1 + "." + (i + 1));
+          $("#toc").append(
+            '<h6><a href="#' +
+              (index + 1) +
+              "." +
+              (i + 1) +
+              '">' +
+              $(this).html() +
+              "</a></h6>"
+          );
+        });
+      });
+
+      jQuery("#panel").on(
+        "click",
+        "a:not(.codesandboxlink a, .toolbar a)",
+        function() {
+          window.open($(this).attr("href"));
+          return false;
+        }
+      );
+
+      // create link to codesandob
+      jQuery(".line-numbers:has(.language-js)")
+        .not(":has(.noRun)")
+        .before(
+          '<div class="codesandboxlink"><a href="#">run/edit in codesandbox.io</a></div>'
+        );
+
+      // create event handler for codesandbox link
+      jQuery("#panel").on("click", ".codesandboxlink a", function(e) {
+        const code = $(this)
+          .parent()
+          .next(".code-toolbar:has(.language-js)")
+          .find("code")
+          .text();
+        var newWindow = window.open("", "_blank");
+        fetch("https://codesandbox.io/api/v1/sandboxes/define?json=1", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify({
+            files: {
+              "index.js": {
+                content: code
+              },
+              "index.html": {
+                content:
+                  '<script src="./node_modules/babel-polyfill/dist/polyfill.js"><\/script><script src="https://unpkg.com/core-js-bundle@3.0.0-beta.3/index.js"><\/script><script src="index.js"><\/script>'
+              },
+              ".babelrc": {
+                content: {
+                  presets: ["env", "stage-0"]
+                }
+              },
+              "package.json": {
+                content: {
+                  name: "ES2015+ Enlightenment Code Example",
+                  version: "1.0.0",
+                  description: "Simple Parcel/Babel Sandbox",
+                  main: "index.html",
+                  scripts: {
+                    start: "parcel index.html --open",
+                    build: "parcel build index.html"
+                  },
+                  dependencies: { "babel-polyfill": "6.26.0" },
+                  devDependencies: {
+                    "parcel-bundler": "^1.12.3",
+                    "babel-preset-env": "^1.7.0",
+                    "babel-preset-stage-0": "^6.24.1"
+                  }
+                }
+              }
+            }
+          })
+        })
+          .then(x => x.json())
+          .then(data => {
+            newWindow.location.href =
+              "https://codesandbox.io/embed/" +
+              data.sandbox_id +
+              "?forcerefresh=1&eslint=1&expanddevtools=1&hidenavigation=1&module=%2Findex.js";
+          });
+        e.preventDefault();
+      });
+
+      // toggle TOC from hamburger icon
+      document
+        .querySelector("#menuButton")
+        .addEventListener("click", function() {
+          slideout.toggle();
+        });
+
+      // toggle TOC on window resize
+      window.addEventListener("resize", resizeThrottler, false);
+      var resizeTimeout;
+      function resizeThrottler() {
+        // ignore resize events as long as an actualResizeHandler execution is in the queue
+        if (!resizeTimeout) {
+          resizeTimeout = setTimeout(function() {
+            resizeTimeout = null;
+            actualResizeHandler();
+
+            // The actualResizeHandler will execute at a rate of 15fps
+          }, 66);
+        }
+      }
+      function actualResizeHandler() {
+        if (window.innerWidth > 1036) {
+          slideout.open();
+        } else {
+          slideout.close();
+        }
+      }
+
+      // open TOC on load if window is wide enough
+      window.addEventListener("load", function(event) {
+        if (window.innerWidth > 1036) {
+          slideout.open();
+        } else {
+          slideout.close();
+        }
+      });
+    </script>
+  </body>
+</html>
