@@ -29,13 +29,13 @@
         Component Driven Software
       </h1>
 
-      <h3 style="margin-top:0px">by <a href="https://www.codylindley.com">Cody Lindley</a></h3>
+      <h3 style="margin-top:0px">by <a href="http://www.codylindley.com">Cody Lindley</a></h3>
       <section>
         Component Driven Software is a catch-all term used to describe the methodologies and tools for subdividing part
         or all of an application into <a
           href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
         specified and managed presentational (i.e., UI components) and
-        nonpresentational composable components. Components are built, versioned, and tested separately from application
+        nonpresentational components. Components are built, versioned, and tested separately from application
         development concerns and in lockstep with Visual Design, Interaction Design, and User Experience design
         requirements to ensure UI quality and avoid difficult to maintain monolithic software applications.
       </section>
@@ -55,7 +55,7 @@
             thousands of unversioned built-as-needed undocumented and disorganized components resulting in monolithic
             front-end applications that are slow to build, have subpar UI's, have tightly coupled components, and are
             often difficult to maintain and scale. Ideally, what is needed is a system in which most if not all the
-            components, especially UI components, become first-class design citizens that are constructed in
+            components, especially UI components, become first-class citizens that are constructed in
             isolation, self-contained, versioned, and given the proper documentation and isolated testing routines.
           </li>
           <li>
@@ -66,9 +66,10 @@
             carry too much
             workload when building user-centered, maintainable, cross-device, cross-platform, front-end
             applications—this workload
-            results in long, complicated development cycles. For complex front-end applications, application developers
+            results in long, complicated development cycles. For complex applications, application developers
             have too
-            many responsibilities. As a result, the UI can become a second-class citizen or afterthought to application
+            many responsibilities. As a result, component management (especially UI components) can become a
+            second-class citizen or afterthought to application
             developers.
             Ideally, the burden of application development needs to be distributed to UI developers who are focused on
             building,
@@ -89,11 +90,12 @@
 
       <div id="chapter2" class="chapter">
 
-        <h2>2 : How is Component Driven Software Done?</h2>
+        <h2>2 : How is Component-driven Software Done?</h2>
 
         <p>Component-driven software is built from a component-driven system. A component-driven system is a system
-          instituted by an organization made up of the <strong>goals</strong>, <strong>processes</strong>,
-          <strong>strategies/architectures</strong>, <strong>people/roles</strong>, and <strong>tools</strong> used by
+          instituted by an organization that defines/facilitates the <strong>goals</strong>,
+          <strong>processes-roles-people</strong>,
+          <strong>strategies-architectures</strong>, and <strong>tools</strong> used by
           the organization to birth and nurture <a
             href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
           built components.
@@ -101,20 +103,26 @@
 
         <p>
           <strong>Goals:</strong>
-          Speed development? Fortify the quality and of the user interface and the user experience? Visual unification?
+          Speed development? Fortify the quality and of the user interface and the user experience? Reuse? Visual
+          unification? Behavioral Unification? Experiential Unification?
           Separate application development from UI development? Avoid monolithic unmaintainable applications that have
-          to be re-built too often? Reuse?
+          to be re-built too often?
         </p>
 
         <p>
-          <strong>Processes:</strong>
-          How will components be defined? When will components be defined? When are they built? How will updates to
+          <strong>Processes, Roles, & People:</strong>
+          How will components be defined? When will components be defined? How will updates to
           components be managed? How does this fit into
-          your development process that exists today? Do component collections accept contributions?
+          your development process that exists today? Do component collections accept contributions? Who is responsible
+          for defining components (designer, developers, both?). Who is responsible for building and
+          documenting
+          components (UI developers, application developers, both?). Who is responsible for maintaining the component
+          specifications and component implementations? Will you build a focused team around components? Will the team
+          have transient contributors or focused permanent full-time roles?
         </p>
 
         <p>
-          <strong>Strategies/Architectures:</strong>
+          <strong>Strategies & Architectures:</strong>
           Do you need top down components, bottom up, or both?
           Will you build presentational components and nonpresentational components? Will you build primitive UI
           components as well as domain UI components. How will you organize your component sets? By product/application?
@@ -122,24 +130,19 @@
         </p>
 
         <p>
-          <strong>People/Roles:</strong>
-          Who is responsible for defining components (designer, developers, both?). Who is responsible for building and
-          documenting
-          components (UI developers, application developers, both?). Who is responsible for maintaining the component
-          specifications and component implementations? Will you construct a focused team around components?
-        </p>
-
-        <p>
           <strong>Tools:</strong>
-          Which tools will you employ, and how will they be utilized to support the system?
+          Which tools will you employ, and how will they be utilized to support the goals, processes-roles-people, and
+          strategies-architectures?
         </p>
 
-        <p>There is no one way to go about building component-driven software or constructing a component-driven system.
-          No two organizations will likely ever erect the same component-driven system to build component-driven
-          software. However, there are some foundational tenets of building component-driven software using a
-          component-driven system.</p>
+        <p>There is no one way to go about doing component-driven software or constructing a component-driven system.
+          No two organizations are exactly alike, with the same problems to solve, and no two organizations will erect
+          the same component-driven
+          system. This makes prescribing any single canonical component-driven system difficult. However, there are
+          some foundational tenets of building component-driven software which component-driven system will
+          likely commonly embody.</p>
 
-        <p>Common tenets of a component-driven software are:</p>
+        <p>Common tenets of a component-driven system are:</p>
 
         <ul>
           <li>Components get developed in isolation, tested in isolation, and are <a
@@ -152,7 +155,7 @@
             other richer components within the system (i.e., Domain UI components are composed of Primitive UI
             components or said another way, Primitive UI components can be gathered together in order to produce Domain
             UI components).</li>
-          <li>Component-driven development is a separate concern from the concerns of application architecture and
+          <li>Component-driven components are a separate concern from the concerns of application architecture and
             application development.</li>
           <li>Components will undergo component specific unit testing (e.g., Jest), visually testing (e.g., Percy), and
             functional testing (e.g.,
@@ -162,7 +165,8 @@
             separately from feature specifications.</li>
           <li>Components are viewed as a game of composition. When components, especially UI components are view in
             this way application developers can build the bulk of an application from custom pre-built, heavily
-            documented, and pre-test UI components that have fallen out of traditional UI mockups/screens. </li>
+            documented, and pre-test UI components that have fallen out of traditional UI mockups/screens and business
+            requirements. </li>
         </ul>
 
         <p>Disregarding one of the tenets mentioned above will erode the value of component-driven systems relatively
@@ -173,21 +177,43 @@
 
       <div id="chapter3" class="chapter">
 
+        <h2>3 : Defining Component-driven Goals</h2>
+
+      </div>
+
+      <div id="chapter4" class="chapter">
+
+        <h2>4 : Defining Component-driven Process, Roles, & People</h2>
+
+      </div>
+
+      <div id="chapter5" class="chapter">
+
+        <h2>5 : Defining Component-driven Strategies & Architectures</h2>
+
+      </div>
+
+      <div id="chapter6" class="chapter">
+
+        <h2>6 : Adopting Component-driven Tools</h2>
+
+      </div>
+
+      <div id="chapter7" class="chapter">
+
+        <h2>7 : Component-driven Software Use cases</h2>
+
+      </div>
+
+      <div id="chapter8" class="chapter">
+
         <h2>Prior Art</h2>
 
-        <h3>Examples of pre-existing Design Systems and their implementations</h3>
+        <h3>Canonical example of a Design System and its implementation</h3>
 
 
         <p>
           Design System: <a href="https://spectrum.adobe.com/">Spectrum</a><br>
-          Implementations: <a href="https://opensource.adobe.com/spectrum-css/">Spectrum CSS</a>, <a
-            href="https://react-spectrum.adobe.com/react-spectrum/index.html">React Spectrum</a>, <a
-            href="https://react-spectrum.adobe.com/react-aria/index.html">React Aria</a>, <a
-            href="https://react-spectrum.adobe.com/react-stately/index.html">React Stately</a>
-        </p>
-
-        <p>
-          Design System: <a href="https://spectrum.adobe.com/">Fluent</a><br>
           Implementations: <a href="https://opensource.adobe.com/spectrum-css/">Spectrum CSS</a>, <a
             href="https://react-spectrum.adobe.com/react-spectrum/index.html">React Spectrum</a>, <a
             href="https://react-spectrum.adobe.com/react-aria/index.html">React Aria</a>, <a
@@ -254,13 +280,15 @@
         </ul>
       </div>
 
-      <div id="chapter4" class="chapter">
+      <div id="chapter9" class="chapter">
 
         <h2>Terms</h2>
 
         <h3>Application Runtime</h3>
 
-        <p>Where application developers install and implement components to produce a working application.</p>
+        <p>When the source code for an application is executed and the application is running (e.g. if you use React
+          then the runtime is when the web platform takes your built code and runs it to produce a running application
+          in a web browser)</p>
 
         <h3>Bottom-Up Components</h3>
 
@@ -280,11 +308,15 @@
           components. The components are built, versioned, and tested separately from application development concerns
           and design concerns to ensure quality and avoid monolithic software applications.</p>
 
-        <h3>Compoent-driven system </h3>
+        <h3>Component-driven system </h3>
 
         <p>A systematic plan instituted by an organization made up of the goals, processes, strategies/architectures,
           people/roles, and tools leveraged by an organization in order to birth and nurture components for
           component-driven software applications.</p>
+
+        <h3>Component Integration</h3>
+
+        <p>The source code were components are installed and implemented into use.</p>
 
         <h3>Component Specifications </h3>
 
@@ -336,11 +368,11 @@
 
       </div>
 
-      <div id="chapter5" class="chapter">
+      <div id="chapter10" class="chapter">
 
         <h2>FAQ</h2>
 
-        <h3>Wait, are you saying build unique collections of components for each product or applicatioin?</h3>
+        <h3>Wait, are you saying build unique collections of components for each product or application?</h3>
 
         <p>Yes. This exactly the notion at the heart of component driven development (i.e. bottom up components). By way
           of a components driven
@@ -400,7 +432,7 @@
           and theme
           components consume a Design System.</p>
 
-        <p>Don't conflate a design system with an implementation fueld by a Design system. Design systems end where
+        <p>Don't conflate a design system with an implementation fueled by a Design system. Design systems end where
           implementations and component driven systems begin.</p>
 
         <h3>Is this just another name for a "Micro Frontend"?</h3>
