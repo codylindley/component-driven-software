@@ -16,6 +16,11 @@
 
   <div id="menu">
 
+    <h3>Component Driven Software</h3>
+
+    <div id="from">componentdrivensoftware.com by <a href="http://www.codylindley.com">Cody Lindley</a>
+    </div>
+
     <div id="toc"></div>
   </div>
 
@@ -195,7 +200,91 @@
 
       <div id="chapter6" class="chapter">
 
-        <h2>6 : Adopting Component-driven Tools</h2>
+        <h2>6 : Defining Component-driven Tools</h2>
+
+        <h3>6.1 : Design Tools</h3>
+
+        <p>Various design tools are available for specifying and managing design systems and components. However Figma
+          in
+          my opinion rises to the top.
+          Here is why:</p>
+
+        <ul>
+          <li>
+            Figma files can be embedded into component driven systems (e.g. using the <a
+              href="https://storybook.js.org/addons/storybook-addon-designs/">Storybook Designs addon</a> you can add
+            Figma for display directly when storybook when viewing a component)
+          </li>
+          <li>Figma has inline commenting/feedback system.</li>
+          <li>Figma allows more than one editor at a time which facilitates realtime collaborations</li>
+          <li>Figma offers a rich set of features and plugins for authors of Design Systems.</li>
+          <li>Figma is web based.</li>
+        </ul>
+
+        <h3>6.2 : Development Tools</h3>
+
+        <p>Two distinct options are available today for developers to develop <a
+            href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independent
+            components</a>.</p>
+
+        <p>The first option entails using a tailored set of open source tools that as a whole will provide the means to
+          create and distribute independent components using a <a
+            href="https://en.wikipedia.org/wiki/Monorepo">monorepo.</a></p>
+
+        <p>An example set of these tools would be:</p>
+
+        <ul>
+          <li>
+            <a href="https://www.npmjs.com/">NPM Registry</a>
+            <ul>
+              <li><a href="https://www.npmjs.com/search?q=%40locus-labs">NPM Organization</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://classic.yarnpkg.com/en/">Yarn</a>
+            <ul>
+              <li><a href="https://classic.yarnpkg.com/en/docs/yarn-workflow">Yarn Workspaces</a></li>
+              <li><a href="https://classic.yarnpkg.com/en/docs/cli/run">Yarn Run</a></li>
+            </ul>
+          </li>
+          <li><a href="https://github.com/lerna/lerna#readme">Lerna</a></li>
+          <li><a href="https://storybook.js.org/">Storybook</a></li>
+          <li>
+            <a href="https://rollupjs.org/guide/en/">Rollup</a>
+            <ul>
+              <li><a href="https://rollupjs.org/guide/en/#babel">Babel</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>The second option would be to use Bit (specifically <a href="https://harmony-docs.bit.dev/">Bit Harmony</a>).
+          Bit is currently the only product offering
+          in
+          this space that does
+          most of what option one does but offers it as a product/solution with enterprise features. I like to
+          think of Bit as a node app
+          that can replace the majority of the tools from option one but with the added bonus of <a
+            href="https://bit.dev/">Bit.dev</a>. Bit.dev is
+          where Bit
+          components can be publicly or privately hosted, shared, and composed with anyone.</p>
+
+        <p>I think it important to call out a couple of items Bit does really well v.s. curating a system from
+          open source parts.</p>
+
+        <ol>
+          <li>
+            Bit will version not just every release of the component itself (i.e. an npm sermver) but also the
+            collateral that
+            supports the component (e.g. demos, docs, etc...). In a sense, Bit Harmony is Git for independent
+            components. Bit manages development history and it allows you to go back in time and review the
+            documentation, compositions (i.e. stories), tests, and dependencies from previous versions of the
+            components.
+          </li>
+          <li>Bit conceals the complexities of Yarn workspaces, Lerna, Babel, npm, and build tools.</li>
+          <li>Bit offers Bit.dev, a place to immediately host and share your components with ease.</li>
+          <li>Bit works with presentational components as well as non-presentational components. In other words it does
+            not assume you only want to build UI components.</li>
+        </ol>
 
       </div>
 
