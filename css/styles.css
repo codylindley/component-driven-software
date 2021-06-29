@@ -3,6 +3,21 @@ body {
     height: 100%;
 }
 
+.images{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.item {
+  background-color: #ddd;
+  border: 5px solid #fff;
+  padding: 5px;
+  text-align: center;
+}
+
 #panel a:link {
     background-color: rgba(187, 239, 253, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -82,10 +97,6 @@ p {
     line-height: 1.7;
 }
 
-img {
-    margin-top: 30px;
-}
-
 iframe {
     margin-top: 30px;
 }
@@ -129,8 +140,8 @@ ol {
     margin: 20px 0 20px 40px;
 }
 
-ol li,
-ul li {
+.chapter > ol li,
+.chapter > ul li {
     margin: 20px 0 0 0;
     line-height: 1.7;
     font-size: 17px;

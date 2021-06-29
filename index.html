@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/prism.css" />
+  <link href="css/viewer.min.css" rel="stylesheet">
   <script src="js/prism.js"></script>
   <title>Component Driven Software</title>
 </head>
@@ -95,50 +96,7 @@
 
       <div id="chapter2" class="chapter">
 
-        <h2>2 : How is Component-driven Software Done?</h2>
-
-        <p>Component-driven software is built from a component-driven system. A component-driven system is a system
-          instituted by an organization that defines/facilitates the <strong>goals</strong>,
-          <strong>processes-roles-people</strong>,
-          <strong>strategies-architectures</strong>, and <strong>tools</strong> used by
-          the organization to birth and nurture <a
-            href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
-          built components.
-        </p>
-
-        <p>
-          <strong>Goals:</strong>
-          Speed development? Fortify the quality and of the user interface and the user experience? Reuse? Visual
-          unification? Behavioral Unification? Experiential Unification?
-          Separate application development from UI development? Avoid monolithic unmaintainable applications that have
-          to be re-built too often?
-        </p>
-
-        <p>
-          <strong>Processes, Roles, & People:</strong>
-          How will components be defined? When will components be defined? How will updates to
-          components be managed? How does this fit into
-          your development process that exists today? Do component collections accept contributions? Who is responsible
-          for defining components (designer, developers, both?). Who is responsible for building and
-          documenting
-          components (UI developers, application developers, both?). Who is responsible for maintaining the component
-          specifications and component implementations? Will you build a focused team around components? Will the team
-          have transient contributors or focused permanent full-time roles?
-        </p>
-
-        <p>
-          <strong>Strategies & Architectures:</strong>
-          Do you need top down components, bottom up, or both?
-          Will you build presentational components and nonpresentational components? Will you build primitive UI
-          components as well as domain UI components. How will you organize your component sets? By product/application?
-          By device? By platform? By all three?
-        </p>
-
-        <p>
-          <strong>Tools:</strong>
-          Which tools will you employ, and how will they be utilized to support the goals, processes-roles-people, and
-          strategies-architectures?
-        </p>
+        <h2>2 : Component-drive Software Tenants</h2>
 
         <p>There is no one way to go about doing component-driven software or constructing a component-driven system.
           No two organizations are exactly alike, with the same problems to solve, and no two organizations will erect
@@ -177,32 +135,84 @@
         <p>Disregarding one of the tenets mentioned above will erode the value of component-driven systems relatively
           quickly.</p>
 
-
       </div>
 
       <div id="chapter3" class="chapter">
 
-        <h2>3 : Defining Component-driven Goals</h2>
+        <h2>3 : How is Component-driven Software Done?</h2>
 
-      </div>
+        <p>Component-driven software is built from a component-driven system. A component-driven system is a system
+          instituted by an organization that defines/facilitates the <strong>goals</strong>,
+          <strong>processes-roles-people</strong>,
+          <strong>strategies-architectures</strong>, and <strong>tools</strong> used by
+          the organization to birth and nurture <a
+            href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
+          built components.
+        </p>
 
-      <div id="chapter4" class="chapter">
+        <h3>3.1 : Goals</h3>
 
-        <h2>4 : Defining Component-driven Process, Roles, & People</h2>
+        <p>
+          Before adopting component driven software practices an organization should get all the stockholders in
+          alignment
+          on the
+          goals of adopting such a methodology. Don't over complicate the matter. Start by prioritizing a list of goals
+          and
+          then make
+          decisions based off the list.
+        </p>
 
-      </div>
+        <p><strong>What are you goals:</strong>
+          Speed development? Fortify the quality of the user interface and the user experience? Reuse? Visual
+          unification? Behavioral Unification? Experiential Unification?
+          Separate application development from UI development? Avoid monolithic unmaintainable applications that have
+          to be re-built too often?
+        </p>
 
-      <div id="chapter5" class="chapter">
+        <p>See the use case below for an example.</p>
 
-        <h2>5 : Defining Component-driven Strategies & Architectures</h2>
+        <h3>3.2 : Strategies & Architectures</h3>
 
-      </div>
+        <p>After an organization has a set of goals it will then need to use these goals to decide upon a component
+          strategy and
+          architecture </p>
 
-      <div id="chapter6" class="chapter">
+        <p><strong>Answer the following questions:</strong>
+          Do you need top down-components, bottom-up, or both?
+          Will you build UI components and nonpresentational components? Will you build primitive UI
+          components as well as domain UI components. How will you organize your component sets? By product/application?
+          By device? By platform? By all three? How does the Design System integrate? Will the component sets need to be
+          themeable?
+        </p>
 
-        <h2>6 : Defining Component-driven Tools</h2>
+        <p>See the use case below for an example.</p>
 
-        <h3>6.1 : Design Tools</h3>
+        <h3>3.3 : Processes, Roles, & People</h3>
+
+        <p>With a set of goals and a component strategy & architecture defined the design and engineering organization
+          will have
+          to determine a design and development process for building independent components </p>
+
+        <p>
+          <strong>Determine:</strong> How will components be defined? When will components be defined? How will updates
+          to
+          components be managed? How does this fit into
+          your development process that exists today? Do component collections accept contributions? Who is responsible
+          for defining components (designer, developers, both?). Who is responsible for building and
+          documenting
+          components (UI developers, application developers, both?). Who is responsible for maintaining the component
+          specifications and component implementations? Will you build a focused team around components? Will the team
+          have transient contributors or focused permanent full-time roles?
+        </p>
+
+        <p>See the use case below for an example.</p>
+
+        <h3>3.4 : Tools</h3>
+
+        <p>The main tools for building component driven software can be divided into two main catagories, "Design Tools"
+          and "Development Tools".</p>
+
+        <p><strong>Design Tools:</strong></p>
 
         <p>Various design tools are available for specifying and managing design systems and components. However Figma
           in
@@ -221,7 +231,7 @@
           <li>Figma is web based.</li>
         </ul>
 
-        <h3>6.2 : Development Tools</h3>
+        <p><strong>Development Tools:</strong></p>
 
         <p>Two distinct options are available today for developers to develop <a
             href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independent
@@ -229,7 +239,8 @@
 
         <p>The first option entails using a tailored set of open source tools that as a whole will provide the means to
           create and distribute independent components using a <a
-            href="https://en.wikipedia.org/wiki/Monorepo">monorepo.</a></p>
+            href="https://en.wikipedia.org/wiki/Monorepo">monorepo.</a>
+        </p>
 
         <p>An example set of these tools would be:</p>
 
@@ -286,15 +297,136 @@
             not assume you only want to build UI components.</li>
         </ol>
 
+        <p>
+          Which tools will you employ, and how will they be utilized to support the goals, strategies-architectures, and
+          processes-roles-people?
+        </p>
+
+        <p>See the use case below for an example.</p>
+
+
       </div>
 
-      <div id="chapter7" class="chapter">
 
-        <h2>7 : Component-driven Software Use cases</h2>
+      <div id="chapter4" class="chapter">
+
+        <h2>4 : Use Case</h2>
+
+        <h3>4.1 : LocusLabs</h3>
+
+        <p>In March 2020 I was hired by the CTO and VP of Product from LocusLabs to orchestrate a component driven
+          software practice. This was an ideal situation to institute a proper component driven system because both
+          design and engineering offered focused resources and time to the solution.</p>
+
+        <p>As you read this use case keep in mind that LocusLabs built several different types of applications running
+          on various devices (Kiosks, Large Displays, Desktops, Tablets, and Mobile devices) used or viewed by various
+          types of users (i.e. stationary users viewing only, walking users viewing only, kiosk touch users,
+          desktop/laptop mouse users, mobile touch users).</p>
+
+        <h3>4.2 : Goals</h3>
+
+        <p>Both design and engineering
+          agreed on the following goals:</p>
+
+        <ol>
+          <li>
+            Produce as much of the UI as possible for any given product/application in conjunction with design in the
+            form of UI components so application developers can focus on application development and not UI development.
+          </li>
+          <li>Have UI integrity (visual design, behavior design, interaction design) baked into the components before
+            they are implemented.</li>
+          <li>Speed the development and UI quality of products/applications by creating a new engineering group who
+            focused on the
+            development and testing of UI components that had been specified in detail by the design team using
+            component specifications.</li>
+        </ol>
+
+        <h3>4.3 : Strategies & Architectures</h3>
+
+        <p>The LocusLabs design and engineering groups determined a strategy and component architecture to meet the
+          agreed upon goals:</p>
+
+        <ul>
+          <li>Build bottom-up independent components (individually versioned and installed) for each
+            product/application.</li>
+          <li>Each product/application would use its own design system.</li>
+          <li>The component collections will be organized by product > device > composability.</li>
+          <li>Component re-use only occurs internally within each product/application. In no way did
+            products/applications share components externally. The cost to repeat oneself was trivial compared to the
+            risks of any type of top down components tightly coupling products together or complicating component
+            development and design.</li>
+          <li>Each component set will use a theme
+            that can be overridden (i.e. customizable design tokens from the design system).</li>
+        </ul>
+
+        <p>An example collection of components for a product called, "Maps Online" would be:</p>
+
+        <ul>
+          <li>Maps Online<ul>
+              <li>Desktop/Tablet<ul>
+                  <li>domain<ul>
+                      <li>componentA</li>
+                      <li>componentB</li>
+                      <li>etc</li>
+                    </ul>
+                  </li>
+                  <li>primitive<ul>
+                      <li>componentA</li>
+                      <li>componentB</li>
+                      <li>etc</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Mobile<ul>
+                  <li>domain<ul>
+                      <li>componentA</li>
+                      <li>componentB</li>
+                      <li>etc</li>
+                    </ul>
+                  </li>
+                  <li>primitive<ul>
+                      <li>componentA</li>
+                      <li>componentB</li>
+                      <li>etc</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>Laboring an agreed upon strategy and architecture was not easy feat. It took weeks of conversations and
+          focusing on the goals to arrive at an agreed upon idea of what to build and how to organize them.</p>
+
+        <p>Below is a visual of the diagrams used when these conversation were had:</p>
+
+        <div class="images">
+
+          <div class="item"><img src="img/option1.png"></div>
+
+          <div class="item"><img src="img/option2.png"></div>
+
+          <div class="item"><img src="img/option3.png"></div>
+
+          <div class="item"><img src="img/option4.png"></div>
+
+          <div class="item"><img src="img/option5.png"></div>
+
+          <div class="item"><img src="img/a.png"></div>
+
+          <div class="item"><img src="img/b.png"></div>
+
+        </div>
+
+        <h3>4.4 : Processes, Roles, & People</h3>
+
+        <h3>4.5 : Tools</h3>
 
       </div>
 
-      <div id="chapter8" class="chapter">
+      <div id="chapter5" class="chapter">
 
         <h2>Prior Art</h2>
 
@@ -369,7 +501,7 @@
         </ul>
       </div>
 
-      <div id="chapter9" class="chapter">
+      <div id="chapter6" class="chapter">
 
         <h2>Terms</h2>
 
@@ -457,7 +589,7 @@
 
       </div>
 
-      <div id="chapter10" class="chapter">
+      <div id="chapter7" class="chapter">
 
         <h2>FAQ</h2>
 
@@ -562,6 +694,9 @@
   <script src="js/slideout.min.js "></script>
   <script src="js/jquery-3.3.1.slim.min.js "></script>
 
+  <script src="js/viewer.min.js"></script><!-- Viewer.js is required -->
+  <script src="js/jquery-viewer.js"></script>
+
   <script>
     // Create slide out TOC
     var slideout = new Slideout({
@@ -570,6 +705,12 @@
       padding: 356,
       tolerance: 70
     });
+
+    // image viewer
+
+    // View a list of images
+    $('.images, .image').viewer();
+
 
     // Create TOC dynamically from content
     jQuery(".chapter").each(function (index) {
