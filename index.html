@@ -144,7 +144,7 @@
 
         <p>Component-driven software is built from a component-driven system. A component-driven system is a system
           instituted by an organization that defines/facilitates the <strong>goals</strong>,
-          <strong>processes-roles-people</strong>,
+          <strong>roles-processes-assets</strong>,
           <strong>strategies-architectures</strong>, and <strong>tools</strong> used by
           the organization to birth and nurture <a
             href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
@@ -184,7 +184,7 @@
           themeable?
         </p>
 
-        <h3>3.3 : Processes, Roles, & People</h3>
+        <h3>3.3 : Roles, Processes, Assets</h3>
 
         <p>With a set of goals and a component strategy & architecture defined the design and engineering organization
           will have
@@ -300,24 +300,26 @@
 
       <div id="chapter4" class="chapter">
 
-        <h2>4 : Use Case</h2>
+        <h2>4 : LocusLabs Use Case</h2>
 
-        <h3>4.1 : LocusLabs</h3>
+        <h3>4.1 : Overview</h3>
 
         <p>In March 2020 I was hired by the CTO and VP of Product from LocusLabs to orchestrate a component driven
-          software practice. This was an ideal situation, given the upfront support from both design and engineering, to
-          institute a
-          proper component driven system with ownership in each group.</p>
+          software practice. What is describe here is the component driven system I built for locuslabs.</p>
 
-        <p>As you read this use case keep in mind that LocusLabs built several different types of applications running
-          on various devices (Kiosks, Large Displays, Desktops, Tablets, and Mobile devices) used or viewed by various
+        <p>As you read this use case keep in mind that the decisions for the system were unique to LocusLabs. Note that
+          LocusLabs built several different types of applications running
+          on various devices (Kiosks, Large Displays, Desktops & Laptops, Tablets, and Mobile phones) used or viewed by
+          various
           types of users (i.e. stationary users viewing only, walking users viewing only, kiosk touch users,
-          desktop/laptop mouse users, mobile touch users).</p>
+          desktop/laptop mouse users, mobile phone touch users). The system built for Locuslabs is not a general
+          prescription for other organization. Use the use case as an example of the practice of creating systems. Each
+          organization will erect a different system.</p>
 
         <h3>4.2 : Goals</h3>
 
         <p>Both design and engineering
-          agreed on the following goals:</p>
+          agreed on the following component-driven goals:</p>
 
         <ol>
           <li>
@@ -334,14 +336,15 @@
 
         <h3>4.3 : Strategies & Architectures</h3>
 
-        <p>The LocusLabs design and engineering groups determined a strategy and component architecture to meet the
+        <p>The LocusLabs design and engineering groups determined the following strategy and component architecture to
+          meet the
           agreed upon goals:</p>
 
         <ul>
           <li>Build bottom-up independent components (individually versioned and installed) for each
             product/application.</li>
           <li>Each product/application would use its own design system.</li>
-          <li>The component collections will be organized by product > device > composability.</li>
+          <li>The component collections will be organized by product > device (optional) > composability.</li>
           <li>Component re-use only occurs internally within each product/application. In no way did
             products/applications share components externally. The cost to repeat oneself was trivial compared to the
             risks of any type of top down components tightly coupling products together or complicating component
@@ -352,46 +355,46 @@
 
         <p>An example collection of components for a product called, "Maps Online" would be:</p>
 
+
         <ul>
-          <li>Maps Online<ul>
-              <li>Desktop/Tablet<ul>
-                  <li>domain<ul>
-                      <li>componentA</li>
-                      <li>componentB</li>
-                      <li>etc</li>
-                    </ul>
-                  </li>
-                  <li>primitive<ul>
-                      <li>componentA</li>
-                      <li>componentB</li>
-                      <li>etc</li>
-                    </ul>
-                  </li>
+          <li>Maps Online Desktop/Tablet Components:<ul>
+              <li>domain<ul>
+                  <li>componentA</li>
+                  <li>componentB</li>
+                  <li>etc</li>
                 </ul>
               </li>
-              <li>Mobile<ul>
-                  <li>domain<ul>
-                      <li>componentA</li>
-                      <li>componentB</li>
-                      <li>etc</li>
-                    </ul>
-                  </li>
-                  <li>primitive<ul>
-                      <li>componentA</li>
-                      <li>componentB</li>
-                      <li>etc</li>
-                    </ul>
-                  </li>
+              <li>primitive<ul>
+                  <li>componentA</li>
+                  <li>componentB</li>
+                  <li>etc</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Maps Online Mobile Components:<ul>
+              <li>domain<ul>
+                  <li>componentA</li>
+                  <li>componentB</li>
+                  <li>etc</li>
+                </ul>
+              </li>
+              <li>primitive<ul>
+                  <li>componentA</li>
+                  <li>componentB</li>
+                  <li>etc</li>
                 </ul>
               </li>
             </ul>
           </li>
         </ul>
 
-        <p>Laboring an agreed upon strategy and architecture was not easy feat. It took weeks of conversations and
-          focusing on the goals to arrive at an agreed upon idea of what to build and how to organize them.</p>
 
-        <p>Below is a visual of the diagrams used when these conversation were had:</p>
+        <p>Laboring an agreed upon strategy and architecture was not easy feat. It took weeks of conversations and
+          focusing on the goals to arrive at an agreed upon idea of what to build.</p>
+
+        <p>Below are a few of the diagrams that were used when discussing the correct components strategy and
+          architecture:</p>
 
         <div class="images">
 
@@ -409,11 +412,229 @@
 
           <div class="item"><img src="img/b.png"></div>
 
+          <div class="item"><img src="img/d.png"></div>
+
         </div>
 
-        <h3>4.4 : Processes, Roles, & People</h3>
+        <h3>4.4 : Roles, Processes, Assets</h3>
+
+        <p>A new engineering group was formed within the LocusLabs made up of two full-time
+          front-end UI
+          engineers and one front-end UI engineer lead. The team was called the, "UI Component Dev Team". The lead
+          worked with design to build out a component-driven
+          process and a component specification template that would produce a collection of bottom-up components for
+          each
+          product.
+        </p>
+
+        <p>The process:</p>
+
+        <div class="image">
+          <img src="img/c.png">
+        </div>
+
+        <p>The component specification template:</p>
+
+        <div class="image">
+          <img src="img/template.png">
+        </div>
+
+        <p>The process worked as follows. Each feature of
+          a
+          product/application would be built out according to the business requirements using standard screen mockups
+          which describe how the features of the product/application were to function according to the end user.</p>
+
+        <p>e.g. mockup representing the building level selector feature in the Maps Online product:</p>
+
+        <div class="image">
+          <img src="img/e.png">
+        </div>
+
+        <p>Then design would break down all the mockups into primitive and domain components specifications (i.e.
+          letting the components fall out of the feature specifications).</p>
+
+        <p>e.g. the building level selector domain components specification:</p>
+
+        <div class="image">
+          <img src="img/f.png">
+        </div>
+
+        <div class="notes">
+
+          <p>
+            <strong>Note:</strong>
+          </p>
+          <ol>
+            <li>
+              Component specifications could also define their own internal primitive components that we called facets.
+              These facets were consider components that required individual specifications but were not publicly
+              re-usable (i.e. primitive components).
+              You'll notice in the building level selector component specification above that the component was also
+              composed of four internal components.
+            </li>
+          </ol>
+        </div>
+
+        <p>e.g. the primitive components that composed the building level selector domain component:</p>
+
+        <div class="images">
+
+          <div class="item"><img src="img/g.png"></div>
+
+          <div class="item"><img src="img/i.png"></div>
+
+          <div class="item"><img src="img/j.png"></div>
+
+        </div>
+
+        <p>Once the component specifications were available the engineers from the UI component dev team would
+          take the specifications and build out the components and create the automated visual and functional test for
+          each
+          component using the tools decided upon by the teams lead UI engineer:</p>
+
+        <p>e.g. here is the built domain Building Level Selector component inside of Storybook:</p>
+
+        <div class="images">
+
+          <div class="item"><img src="img/h.png"></div>
+
+          <div class="item"><img src="img/k.png"></div>
+
+          <div class="item"><img src="img/l.png"></div>
+
+        </div>
 
         <h3>4.5 : Tools</h3>
+
+
+        <p>Below are a list of the tools that were used to facilitated the development, management, testing, and
+          distribution of LocusLabs UI components:</p>
+
+        <p><strong>CI/CD</strong></p>
+
+        <ul data-sourcepos="45:1-49:0" dir="auto">
+          <li data-sourcepos="45:1-49:0">Gitlab
+            <ul data-sourcepos="46:3-49:0">
+              <li data-sourcepos="46:3-49:0">
+                <a href="https://docs.gitlab.com/ee/ci/README.html" rel="nofollow noreferrer noopener"
+                  target="_blank">Gitlab
+                  CI/CD</a>
+                <ul data-sourcepos="47:5-49:0">
+                  <li data-sourcepos="47:5-49:0">
+                    <a href="http://docker.com/" rel="nofollow noreferrer noopener" target="_blank">Docker</a>
+                    <ul data-sourcepos="48:7-49:0">
+                      <li data-sourcepos="48:7-49:0"><a href="https://hub.docker.com/r/cypress/base/"
+                          rel="nofollow noreferrer noopener" target="_blank">cypress/base</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>Component Delivery</strong></p>
+
+        <ul data-sourcepos="52:1-54:0" dir="auto">
+          <li data-sourcepos="52:1-54:0">
+            <a href="https://www.npmjs.com/" rel="nofollow noreferrer noopener" target="_blank">NPM Registry</a>
+            <ul data-sourcepos="53:3-54:0">
+              <li data-sourcepos="53:3-54:0"><a href="https://www.npmjs.com/search?q=%40locus-labs"
+                  rel="nofollow noreferrer noopener" target="_blank">NPM Organization</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>Development</strong></p>
+
+        <ul data-sourcepos="57:1-65:0" dir="auto">
+          <li data-sourcepos="57:1-57:32"><a href="https://nodejs.org/en/" rel="nofollow noreferrer noopener"
+              target="_blank">Node</a></li>
+          <li data-sourcepos="58:1-60:59">
+            <a href="https://classic.yarnpkg.com/en/" rel="nofollow noreferrer noopener" target="_blank">Yarn 1</a>
+            <ul data-sourcepos="59:3-60:59">
+              <li data-sourcepos="59:3-59:72"><a href="https://classic.yarnpkg.com/en/docs/yarn-workflow"
+                  rel="nofollow noreferrer noopener" target="_blank">Yarn Workspaces</a></li>
+              <li data-sourcepos="60:3-60:59"><a href="https://classic.yarnpkg.com/en/docs/cli/run"
+                  rel="nofollow noreferrer noopener" target="_blank">Yarn Run</a></li>
+            </ul>
+          </li>
+          <li data-sourcepos="61:1-61:48"><a href="https://github.com/lerna/lerna#readme"
+              rel="nofollow noreferrer noopener" target="_blank">Lerna</a></li>
+          <li data-sourcepos="62:1-62:85"><a href="https://storybook.js.org/docs/react/get-started/introduction"
+              rel="nofollow noreferrer noopener" target="_blank">Storybook for React</a></li>
+          <li data-sourcepos="63:1-65:0">
+            <a href="https://rollupjs.org/guide/en/" rel="nofollow noreferrer noopener" target="_blank">Rollup</a>
+            <ul data-sourcepos="64:3-65:0">
+              <li data-sourcepos="64:3-65:0"><a href="https://rollupjs.org/guide/en/#babel"
+                  rel="nofollow noreferrer noopener" target="_blank">Babel</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>UI Components</strong></p>
+
+        <ul data-sourcepos="68:1-75:0" dir="auto">
+          <li data-sourcepos="68:1-70:56">
+            <a href="https://reactjs.org/" rel="nofollow noreferrer noopener" target="_blank">React</a>
+            <ul data-sourcepos="69:3-70:56">
+              <li data-sourcepos="69:3-69:56"><a href="https://github.com/facebook/prop-types"
+                  rel="nofollow noreferrer noopener" target="_blank">prop-types</a></li>
+              <li data-sourcepos="70:3-70:56"><a href="https://www.npmjs.com/package/react-dom"
+                  rel="nofollow noreferrer noopener" target="_blank">react-dom</a></li>
+            </ul>
+          </li>
+          <li data-sourcepos="71:1-71:53"><a href="https://styled-components.com/" rel="nofollow noreferrer noopener"
+              target="_blank">Styled Components</a></li>
+          <li data-sourcepos="72:1-72:45"><a href="https://styled-system.com/" rel="nofollow noreferrer noopener"
+              target="_blank">Styled System</a></li>
+          <li data-sourcepos="73:1-73:30"><a href="https://reakit.io/" rel="nofollow noreferrer noopener"
+              target="_blank">ReaKit</a></li>
+          <li data-sourcepos="74:1-75:0"><a href="https://polished.js.org/" rel="nofollow noreferrer noopener"
+              target="_blank">Polished</a></li>
+        </ul>
+
+        <p><strong>Documentation</strong></p>
+
+        <ul data-sourcepos="78:1-81:0" dir="auto">
+          <li data-sourcepos="78:1-78:90">
+            <a href="https://mdxjs.com/" rel="nofollow noreferrer noopener" target="_blank">MDX</a> (via <a
+              href="https://storybook.js.org/docs/react/api/mdx" rel="nofollow noreferrer noopener"
+              target="_blank">Storybook</a>)
+          </li>
+          <li data-sourcepos="79:1-79:105"><a
+              href="https://codesandbox.io/dashboard/all/?workspace=a1d2b3f3-7ff5-44ef-a529-595fbcd81f1b"
+              rel="nofollow noreferrer noopener" target="_blank">codesandbox.com</a></li>
+          <li data-sourcepos="80:1-81:0"><a href="https://shields.io/category/version"
+              rel="nofollow noreferrer noopener" target="_blank">shields.io</a></li>
+        </ul>
+
+        <p><strong>Testing & Quality</strong></p>
+
+        <ul data-sourcepos="84:1-92:0" dir="auto">
+          <li data-sourcepos="84:1-84:31"><a href="https://eslint.org/" rel="nofollow noreferrer noopener"
+              target="_blank">ESLint</a></li>
+          <li data-sourcepos="85:1-85:34"><a href="https://prettier.io/" rel="nofollow noreferrer noopener"
+              target="_blank">Prettier</a></li>
+          <li data-sourcepos="86:1-86:36"><a href="https://stylelint.io/" rel="nofollow noreferrer noopener"
+              target="_blank">StyleLint</a></li>
+          <li data-sourcepos="87:1-87:46"><a href="https://typicode.github.io/husky/#/"
+              rel="nofollow noreferrer noopener" target="_blank">Husky</a></li>
+          <li data-sourcepos="88:1-89:60">
+            <a href="https://percy.io/" rel="nofollow noreferrer noopener" target="_blank">Percy</a>
+            <ul data-sourcepos="89:3-89:60">
+              <li data-sourcepos="89:3-89:60"><a href="https://docs.percy.io/docs/storybook"
+                  rel="nofollow noreferrer noopener" target="_blank">@percy/storybook</a></li>
+            </ul>
+          </li>
+          <li data-sourcepos="90:1-92:0">
+            <a href="https://www.cypress.io/" rel="nofollow noreferrer noopener" target="_blank">Cypress</a>
+            <ul data-sourcepos="91:3-92:0">
+              <li data-sourcepos="91:3-92:0"><a href="https://github.com/NicholasBoll/cypress-storybook"
+                  rel="nofollow noreferrer noopener" target="_blank">cypress-storybook</a></li>
+            </ul>
+          </li>
+        </ul>
 
       </div>
 
@@ -522,8 +743,8 @@
 
         <h3>Component-driven system </h3>
 
-        <p>A systematic plan instituted by an organization made up of the goals, processes, strategies/architectures,
-          people/roles, and tools leveraged by an organization in order to birth and nurture components for
+        <p>A systematic plan instituted by an organization made up of the goals, strategies-architectures,
+          roles-processes-assets, and tools leveraged by an organization in order to birth and nurture components for
           component-driven software applications.</p>
 
         <h3>Component Integration</h3>
