@@ -10,14 +10,14 @@
   <link rel="stylesheet" href="css/prism.css" />
   <link href="css/viewer.min.css" rel="stylesheet">
   <script src="js/prism.js"></script>
-  <title>Component Driven Software</title>
+  <title>Component-driven Software</title>
 </head>
 
 <body>
 
   <div id="menu">
 
-    <h3>Component Driven Software</h3>
+    <h3>Component-driven Software</h3>
 
     <div id="from">componentdrivensoftware.com by <a href="http://www.codylindley.com">Cody Lindley</a>
     </div>
@@ -32,7 +32,7 @@
     <div id="bookPadding">
 
       <h1>
-        Component Driven Software
+        Component-driven Software
       </h1>
 
       <h3 style="margin-top:0px">by <a href="http://www.codylindley.com">Cody Lindley</a></h3>
@@ -102,7 +102,7 @@
           No two organizations are exactly alike, with the same problems to solve, and no two organizations will erect
           the same component-driven
           system. This makes prescribing any single canonical component-driven system difficult. However, there are
-          some foundational tenets of building component-driven software which component-driven system will
+          some foundational tenets of building component-driven software which component-driven systems will
           likely commonly embody.</p>
 
         <p>Common tenets of a component-driven system are:</p>
@@ -118,15 +118,16 @@
             other richer components within the system (i.e., Domain UI components are composed of Primitive UI
             components or said another way, Primitive UI components can be gathered together in order to produce Domain
             UI components).</li>
-          <li>Component-driven components are a separate concern from the concerns of application architecture and
+          <li>Components are a separate concern from the concerns of application architecture and
             application development.</li>
-          <li>Components will undergo component specific unit testing (e.g., Jest), visually testing (e.g., Percy), and
+          <li>Components will undergo isolated unit testing (e.g., Jest), visually testing (e.g., Percy), and
             functional testing (e.g.,
             Cypress) before they are consumed into an application runtime. Applications then test the implementation of
-            a component, not the component themselves.</li>
+            a component, not the component itself.</li>
           <li>UI components are extracted from feature specifications by designers (worse case developers) and specified
             separately from feature specifications.</li>
-          <li>Components are viewed as a game of composition. When components, especially UI components are view in
+          <li>Components are viewed as a game of composition. When components, especially bottom-up UI components are
+            view in
             this way application developers can build the bulk of an application from custom pre-built, heavily
             documented, and pre-test UI components that have fallen out of traditional UI mockups/screens and business
             requirements. </li>
@@ -153,7 +154,7 @@
         <h3>3.1 : Goals</h3>
 
         <p>
-          Before adopting component driven software practices an organization should get all the stockholders in
+          Before adopting component driven software practices an organization should get all the stakeholders in
           alignment
           on the
           goals of adopting such a methodology. Don't over complicate the matter. Start by prioritizing a list of goals
@@ -169,13 +170,11 @@
           to be re-built too often?
         </p>
 
-        <p>See the use case below for an example.</p>
-
         <h3>3.2 : Strategies & Architectures</h3>
 
         <p>After an organization has a set of goals it will then need to use these goals to decide upon a component
           strategy and
-          architecture </p>
+          architecture.</p>
 
         <p><strong>Answer the following questions:</strong>
           Do you need top down-components, bottom-up, or both?
@@ -185,13 +184,11 @@
           themeable?
         </p>
 
-        <p>See the use case below for an example.</p>
-
         <h3>3.3 : Processes, Roles, & People</h3>
 
         <p>With a set of goals and a component strategy & architecture defined the design and engineering organization
           will have
-          to determine a design and development process for building independent components </p>
+          to determine a design and development process for building independent components.</p>
 
         <p>
           <strong>Determine:</strong> How will components be defined? When will components be defined? How will updates
@@ -205,16 +202,17 @@
           have transient contributors or focused permanent full-time roles?
         </p>
 
-        <p>See the use case below for an example.</p>
-
         <h3>3.4 : Tools</h3>
 
-        <p>The main tools for building component driven software can be divided into two main catagories, "Design Tools"
+        <p>The last part of a component-driven system will typically involve picking the tools necessary for building
+          component driven software. The main
+          tools for building component driven software can be divided into two main catagories, "Design Tools"
           and "Development Tools".</p>
 
         <p><strong>Design Tools:</strong></p>
 
-        <p>Various design tools are available for specifying and managing design systems and components. However Figma
+        <p>Various design tools are available for specifying components and development/managing design systems. However
+          Figma
           in
           my opinion rises to the top.
           Here is why:</p>
@@ -297,14 +295,6 @@
             not assume you only want to build UI components.</li>
         </ol>
 
-        <p>
-          Which tools will you employ, and how will they be utilized to support the goals, strategies-architectures, and
-          processes-roles-people?
-        </p>
-
-        <p>See the use case below for an example.</p>
-
-
       </div>
 
 
@@ -315,8 +305,9 @@
         <h3>4.1 : LocusLabs</h3>
 
         <p>In March 2020 I was hired by the CTO and VP of Product from LocusLabs to orchestrate a component driven
-          software practice. This was an ideal situation to institute a proper component driven system because both
-          design and engineering offered focused resources and time to the solution.</p>
+          software practice. This was an ideal situation, given the upfront support from both design and engineering, to
+          institute a
+          proper component driven system with ownership in each group.</p>
 
         <p>As you read this use case keep in mind that LocusLabs built several different types of applications running
           on various devices (Kiosks, Large Displays, Desktops, Tablets, and Mobile devices) used or viewed by various
@@ -473,7 +464,7 @@
 
         ?
 
-        <h3>Written Explanations</h3>
+        <h3>Articles</h3>
 
         <ul>
           <li><a href="https://www.componentdriven.org/">Component Driven User Interfaces</a> &amp; <a
@@ -491,7 +482,7 @@
               Harmony: A New Tool To Create and Collaborate on Independent Node.js Components</a></li>
         </ul>
 
-        <h3>Verbal Presentations</h3>
+        <h3>Talks</h3>
 
         <ul>
           <li><a href="https://www.youtube.com/watch?v=yDjTcBKXKDE&amp;t=2s">Build Components Not
