@@ -19,7 +19,8 @@
 
     <h3>Component-driven Software</h3>
 
-    <div id="from">componentdrivensoftware.com by <a href="http://www.codylindley.com">Cody Lindley</a>
+    <div id="from"><a href="http://www.componentdrivensoftware.com/">componentdrivensoftware.com</a> by <a
+        href="http://www.codylindley.com">Cody Lindley</a>
     </div>
 
     <div id="toc"></div>
@@ -35,10 +36,11 @@
         Component-driven Software
       </h1>
 
-      <h3 style="margin-top:0px">by <a href="http://www.codylindley.com">Cody Lindley</a></h3>
+      <h3 style="margin-top:0px"><a href="http://www.componentdrivensoftware.com/">componentdrivensoftware.com</a> by <a
+          href="http://www.codylindley.com">Cody Lindley</a></h3>
       <section>
         Component Driven Software is a catch-all term used to describe the methodologies and tools for subdividing part
-        or all of an application into <a
+        or all of an application into <a href="https://en.wikipedia.org/wiki/Composability">composable</a> <a
           href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
         specified and managed presentational (i.e., UI components) and
         nonpresentational components. Components are built, versioned, and tested separately from application
@@ -52,8 +54,10 @@
 
         <h2>1 : Why Component-driven Software?</h2>
 
-        <p>The following points broadly explain why an organization might consider adopting the tenants of Component
-          Driven Software:</p>
+        <p>The following bullet points broadly explain why an organization might consider using a component-driven
+          system and building
+          component
+          driven software:</p>
 
         <ul>
           <li>
@@ -72,9 +76,10 @@
             carry too much
             workload when building user-centered, maintainable, cross-device, cross-platform, front-end
             applications—this workload
-            results in long, complicated development cycles. For complex applications, application developers
+            results in long, complicated development cycles. Application developers
             have too
-            many responsibilities. As a result, component management (especially UI components) can become a
+            many responsibilities when building nontrivial applications. As a result, component management (especially
+            UI components) can become a
             second-class citizen or afterthought to application
             developers.
             Ideally, the burden of application development needs to be distributed to UI developers who are focused on
@@ -90,6 +95,15 @@
             application development. These solutions require appropriately skilled owners that play a particular role
             within an organization's design and engineering practices.
           </li>
+          <li>
+            Organizations are looking to separate their design system from implementations.
+          </li>
+          <li>
+            Organizations have realized or felt the empty promises of top down components and seek a solution to build
+            applications with bottom up domain and primitive components instead of premature generic components that
+            have
+            too wide of an api's surfaces due to crosscutting concerns.
+          </li>
         </ul>
 
       </div>
@@ -99,11 +113,12 @@
         <h2>2 : Component-drive Software Tenants</h2>
 
         <p>There is no one way to go about doing component-driven software or constructing a component-driven system.
-          No two organizations are exactly alike, with the same problems to solve, and no two organizations will erect
+          No two organizations are exactly alike, with the same problems and goals. Thus, no two organizations will
+          erect
           the same component-driven
           system. This makes prescribing any single canonical component-driven system difficult. However, there are
           some foundational tenets of building component-driven software which component-driven systems will
-          likely commonly embody.</p>
+          commonly embody.</p>
 
         <p>Common tenets of a component-driven system are:</p>
 
@@ -140,7 +155,7 @@
 
       <div id="chapter3" class="chapter">
 
-        <h2>3 : How is Component-driven Software Done?</h2>
+        <h2>3 : Component-driven Software require a Component-drive System?</h2>
 
         <p>Component-driven software is built from a component-driven system. A component-driven system is a system
           instituted by an organization that defines/facilitates the <strong>goals</strong>,
@@ -186,10 +201,11 @@
           themeable?
         </p>
 
-        <h3>3.3 : Roles, Processes, Assets</h3>
+        <h3>3.3 : Roles & Processes & Assets</h3>
 
-        <p>With a set of goals and a component strategy & architecture defined the design and engineering next
-          will have
+        <p>With a set of goals and a component strategy & architecture defined the design and engineering groups will
+          next
+          have
           to determine a design and development process for building independent components.</p>
 
         <p>
@@ -206,17 +222,18 @@
 
         <h3>3.4 : Tools</h3>
 
-        <p>The last part of a component-driven system will typically involve picking the tools necessary for building
-          component driven software. The main
-          tools for building component driven software can be divided into three catagories, "Design Tools",
+        <p>The last part of a component-driven system will involve selecting a set of tools and then implementing the
+          tools so that independent components can be built, maintained, and shared within an organization.
+          These
+          tools can be divided into three catagories, "Design Tools",
           "Component Tools", and "Development Tools".</p>
 
         <p><strong>Design Tools:</strong></p>
 
-        <p>Various design tools are available for specifying components and developing/managing design systems. However
-          Figma
-          in
-          my opinion rises to the top.
+        <p>Various design tools are available for specifying components and developing/managing design systems. I'd
+          mention several options except that in my opinion Figma is the obvious choice for supporting component driven
+          systems.
+
           Here is why:</p>
 
         <ul>
@@ -238,7 +255,7 @@
             href="https://vuetifyjs.com/">Vuetify</a>), Angular (e.g. <a href="https://material.angular.io/">Material
             Angular</a>), Web Components (e.g. <a href="https://shoelace.style/">shoelace</a>), or HTML & CSS (e.g. <a
             href="https://opensource.adobe.com/spectrum-css/">Spectrum CSS</a>).
-          Depending upon which tool you use each come with a vast set of sub-tools.</p>
+          Depending upon which tool you use each come with a vast ecosystem of sub-tools, communities, and plugins.</p>
 
         <p><strong>Development Tools:</strong></p>
 
@@ -281,7 +298,8 @@
           </li>
         </ul>
 
-        <p>The second path would be to use an off the shelf all in one tool. Bit (specifically <a
+        <p>The second path would be to use an off the shelf all in one tool. <a
+            href="https://harmony-docs.bit.dev/essentials/what-is-bit">Bit</a> (specifically <a
             href="https://harmony-docs.bit.dev/">Bit Harmony</a>)
           is currently the only product offering
           in
@@ -291,10 +309,12 @@
           that can replace the majority of the tools from the previous path mentioned but with the added bonus of <a
             href="https://bit.dev/">Bit.dev</a>. Bit.dev is
           where Bit
-          components can be publicly or privately hosted, shared, and composed with anyone.</p>
+          components can be publicly or privately hosted, shared, and composed with anyone. Consider Bit.dev like a
+          global Storybook in the cloud where anyone can place a collection of runable components that are aware of all
+          other collections of components. </p>
 
-        <p>I think it important to call out a couple of items Bit does really well v.s. curating a system from
-          open source parts.</p>
+        <p>Below is set of bullet point articulating what Bit does really well v.s. curating a system from
+          open source parts (i.e. the first path mentioned).</p>
 
         <ol>
           <li>
@@ -309,6 +329,9 @@
           <li>Bit offers Bit.dev, a place to immediately host and share your components with ease.</li>
           <li>Bit works with presentational components as well as non-presentational components. In other words it does
             not assume you only want to build UI components.</li>
+          <li>Bit <a href="https://harmony-docs.bit.dev/aspects/dependency-resolver/">handles the dependencies</a> for
+            independent components.</li>
+          <li>Bit, if fully adopted can also continuously release a component to anyone who consumes it via Bit</li>
         </ol>
 
       </div>
@@ -433,7 +456,7 @@
 
         </div>
 
-        <h3>4.4 : Roles, Processes, Assets</h3>
+        <h3>4.4 : Roles & Processes & Assets</h3>
 
         <p>A new engineering group was formed within the LocusLabs made up of two full-time
           front-end UI
@@ -743,10 +766,21 @@
           product or application into primitive and domain components that have been precisely designed for the product
           or application.</p>
 
+        <h3>Component</h3>
+
+        <p>"A component is any group of files that serve a single purpose. That can be a React component, a Vue
+          component, a Node.JS
+          module, a CSS component, etc. Each of these can be of different levels of complexity and concreteness. For
+          example, a
+          component can be a full page or a simple UI element. It can be a small utility function or an entire
+          microservice." - from <a
+            href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">"Independent
+            Components: The Web’s New Building Blocks"</a></p>
+
         <h3>Component-driven software</h3>
 
         <p>Catch-all term used to describe the methodologies and tools for subdividing part or all of an application
-          into <a
+          into <a href="https://en.wikipedia.org/wiki/Composability">composable</a> <a
             href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
           specified and managed presentational (i.e., UI components) and nonpresentational composable
           components. The components are built, versioned, and tested separately from application development concerns
@@ -760,7 +794,8 @@
 
         <h3>Component Integration</h3>
 
-        <p>The source code were components are installed and implemented into use.</p>
+        <p>When application developers take an external component and intergrade it into the source code for a given
+          application. Typically, application developers will install a component then use the component.</p>
 
         <h3>Component Specifications </h3>
 
@@ -792,6 +827,11 @@
         <p>An application architecture that results in a single application constructed from more than one application
           runtime (be it an iframe or a module that represents an application)</p>
 
+        <h3>Non-UI Component (aka non-presentational component)</h3>
+
+        <p>A component that has no user facing surface to it. In other words, the component has no user interface
+          aspect.</p>
+
         <h3>Primitive UI/Presentational Components</h3>
 
         <p>A component built that priorities an innate reusable nature (e.g., buttons, Icons, Modals, etc.) rather than
@@ -809,6 +849,12 @@
           that most often require bottom-up components. Top-down components do have a use case, but they are usually for
           prototyping, non-critical UI's, generically patterned UI's, or as plumbing to bottom-up components in the form
           of headless or unstyled UI parts (e.g., reakit.io, readix-ui.com, headlessui.dev). </p>
+
+        <h3>UI Component (aka presentational component)</h3>
+
+        <p>A component that has with it a user facing surface (e.g. a button component) to one degree or another even
+          that surface lacks dimension but otherwise dictates how something visual appears (e.g. a <a
+            href="https://ant.design/components/layout/">layout component</a>). </p>
 
       </div>
 
