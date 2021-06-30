@@ -96,14 +96,19 @@
             within an organization's design and engineering practices.
           </li>
           <li>
-            Organizations are looking to separate their design system from implementations.
+            Organizations are looking to separate their design system from implementations (e.g. <a
+              href="https://spectrum.adobe.com/">Adobe Spectrum</a> is a design system, <a
+              href="https://react-spectrum.adobe.com/">Adobe React Spectrum</a> is an implementation).
           </li>
           <li>
             Organizations have realized or felt the empty promises of top down components and seek a solution to build
-            applications with bottom up domain and primitive components instead of premature generic components that
+            applications with bottom-up domain and primitive components instead of premature generic components that
             have
-            too wide of an api's surfaces due to crosscutting concerns.
+            too wide of an api surfaces due to crosscutting concerns.
           </li>
+          <li>Organizations have felt the value of back-end and front-end micro-series that seperate applications into
+            multiple isolated applications and and want continue this trend by breaking up the applications themselves
+            into isolated independent components.</li>
         </ul>
 
       </div>
@@ -193,7 +198,7 @@
           architecture.</p>
 
         <p><strong>Answer the following questions:</strong>
-          Do you need top down-components, bottom-up, or both?
+          Do you need top-down components, bottom-up, or both?
           Will you build UI components and nonpresentational components? Will you build primitive UI
           components as well as domain UI components. How will you organize your component sets? By product/application?
           By device? By platform? By all three? Is a Design System being leveraged? How does the Design System
@@ -387,7 +392,7 @@
             domain).</li>
           <li>Component re-use only occurs internally within each product/application. In no way did
             products/applications share components externally. The cost to repeat oneself was trivial compared to the
-            risks of any type of top down components tightly coupling products together or complicating component
+            risks of any type of top-down components tightly coupling products together or complicating component
             development and design.</li>
           <li>Each component set will use a theme
             that can be overridden (i.e. customizable design tokens from the design system).</li>
@@ -757,7 +762,7 @@
           then the runtime is when the web platform takes your built code and runs it to produce a running application
           in a web browser)</p>
 
-        <h3>Bottom-Up Components</h3>
+        <h3>Bottom-up Components</h3>
 
         <p>A collection of custom-built components the when implemented, are intended to construct a known and already
           specified set of feature specifications within a product/application. Implementing and adopting these
@@ -838,7 +843,7 @@
           a specific domain use case (i.e., similar to "Atoms" from Atomic Design). Primitive components are often
           constructed to be consumed by domain components to create less general UI components.</p>
 
-        <h3>Top Down Components</h3>
+        <h3>Top-down Components</h3>
 
         <p>A collection of nonspecific optimistically produced components with generic cross-cutting features typically
           valued on the promise of UI unification and reuse. Think of top-down components as components that are not
@@ -864,7 +869,7 @@
 
         <h3>Wait, are you saying build unique collections of components for each product or application?</h3>
 
-        <p>Yes. This exactly the notion at the heart of component driven development (i.e. bottom up components). By way
+        <p>Yes. This exactly the notion at the heart of component driven development (i.e. bottom-up components). By way
           of a components driven
           system any organization should be able to create a collection of components specific to the needs of each
           product or application in a trivial amount of team guaranteeing the quality and integrity of the components
