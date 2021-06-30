@@ -4,7 +4,8 @@ body {
 }
 
 .image{
-     margin-top: 30px; 
+     margin-top: 30px;
+     cursor: zoom-in; 
 }
 
 .images{
@@ -20,6 +21,7 @@ body {
   border: 5px solid #fff;
   padding: 5px;
   text-align: center;
+  cursor: zoom-in;
 }
 
 #panel a:link {
