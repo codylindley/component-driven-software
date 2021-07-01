@@ -403,7 +403,8 @@
             Produce as much of the UI as possible for any given product/application in conjunction with design in the
             form of UI components so application developers can focus on application development and not UI development.
           </li>
-          <li>Have UI integrity (visual design, behavior design, interaction design) baked into the components before
+          <li>Have unchangeable UI integrity (i.e. cemented visual design, behavioral design, interaction design) baked
+            into the components before
             they are implemented.</li>
           <li>Speed the development and UI quality of products/applications by creating a new engineering group that
             focused on the
@@ -417,8 +418,11 @@
           component-driven goals could be achieved:</p>
 
         <ul>
-          <li>Build bottom-up stateless UI React components for each
-            product/application (individually versioned and packaged).</li>
+          <li><a
+              href="https://codylindley.github.io/locuslabs-storybook/?path=/story/ui-component-system-overview-introduction--page">Build
+              bottom-up stateless React UI components</a> for <a
+              href="https://github.com/codylindley/locuslabs-component-driven-system/tree/master/ui_components">each
+              product/application</a> (individually versioned and packaged).</li>
           <li>Each product/application would use its own design system.</li>
           <li>The component collections will be organized by product > device (optional) > composability (primitive v.s.
             domain).</li>
@@ -426,7 +430,9 @@
             products/applications share components externally. The cost to repeat oneself was trivial compared to the
             risks of any type of top-down components tightly coupling products together or complicating component
             development and design.</li>
-          <li>Each component set will use a theme
+          <li>Each component set will use a <a
+              href="https://github.com/codylindley/locuslabs-component-driven-system/blob/master/ui_components/MOL/desktop/themes/mol-desktop-default-theme/index.js">component
+              theme (also an independent component)</a>
             that can be overridden (i.e. customizable design tokens from the design system).</li>
         </ul>
 
@@ -468,7 +474,7 @@
 
 
         <p>Laboring an agreed upon strategy and architecture was not an easy feat. It took weeks of conversations and
-          focusing on the goals to arrive at an agreed upon idea of what to build.</p>
+          focusing on the goals to arrive at an agreed upon idea of what to build and how to build it.</p>
 
         <p>Below are a few of the diagrams that were used when discussing and settling on the correct component strategy
           and
@@ -498,8 +504,9 @@
 
         <p>A new engineering group was formed within the LocusLabs made up of two full-time
           front-end UI
-          engineers and one front-end UI engineer lead. The team was called the "UI Component Dev Team". The lead
-          worked with design to build out a component-driven
+          engineers and one <a href="https://www.linkedin.com/in/codylindley/">front-end UI engineer lead</a>. The team
+          was called the "UI Component Dev Team". The lead
+          worked with designs from the design team to build out a component-driven
           process and a component specification template that would produce a collection of bottom-up components for
           each
           product.
@@ -513,28 +520,38 @@
 
         <p>The component specification template:</p>
 
-        <div class="image">
-          <img src="img/template.png">
+
+        <div class="images">
+
+          <div class="item"><img src="img/template.png"></div>
+
+          <div class="item"><img src="img/x.png"></div>
+
         </div>
 
-        <p>The process worked as follows. Each
+        <p>The component development process worked as follows. Each
           product/application would be built out according to the business/product requirements using standard screen
           mockups
           which visually defined the features of the product/application.</p>
 
-        <p>For example, below is a mockup representing the building level selector feature in the Maps Online product:
+        <p>For example, below is part of the feature specification representing the building level selector feature in
+          the Maps Online
+          product (i.e. a high fidelity screen mockup):
         </p>
 
         <div class="image">
           <img src="img/e.png">
         </div>
 
-        <p>After feature specifications we complete the design team would break the mockups into components and then
-          specify each component (i.e.
-          letting the components fall out of the feature specifications).</p>
+        <p>After feature specifications were completed for an entire product/application the design team would
+          componentize the mockups into components
+          (with the help of the component dev team)
+          and then
+          specify each component outside of the feature specifications (i.e.
+          letting the component specifications fall out of the feature specifications).</p>
 
         <p>For example, below is the building level selector domain components specification as well as the primitive
-          components that helped composed the building level selector domain component:</p>
+          component specs that helped composed the building level selector domain component:</p>
 
         <div class="image">
           <img src="img/f.png">
@@ -557,7 +574,9 @@
           </p>
           <ol>
             <li>
-              Component specifications could also define their own internal components that we called component facets.
+              Component specifications could also define their <a
+                href="https://github.com/codylindley/locuslabs-component-driven-system/tree/master/ui_components/MOL/desktop/components/building-level-selector">own
+                internal sub-components</a> that we called component facets.
               Facets are components that required individual specifications, in order to stay organized, but were not
               intended for
               use by an application engineer, only a component developer.
@@ -597,9 +616,6 @@
         <h3>4.5 : Tools</h3>
 
 
-        <p>Below are a list of the tools that were used to orchestrate the development, management, testing, and
-          distribution of LocusLabs UI components:</p>
-
         <p>Briefly, components were developed, documented, and shared using <a
             href="https://codylindley.github.io/locuslabs-storybook/?path=/story/ui-component-system-overview-introduction--page">Storybook</a>
           from a monorepo (i.e. <a href="https://classic.yarnpkg.com/en/docs/workspaces/">yarn workspaces</a>) that
@@ -610,13 +626,15 @@
           verified using <a href="https://docs.percy.io/docs/storybook">Percy</a> and <a
             href="https://github.com/NicholasBoll/cypress-storybook">Cypress</a> storybook plugins via Gitlabs
           CI/CD automation tools (e.g., visual testing and functional testing on every commit to a development branch in
-          Git). Components
+          Git). </p>
+
+        <p>Components
           were individually distributed to application developers from <a
             href="https://www.npmjs.com/search?q=%40locus-labs">the npm registry</a> with the help of Lerna. Once a
           component was available from the npm registry the documentation pages for each component would verify the
           components basic usage via <a
             href="https://codesandbox.io/dashboard/all/?workspace=a1d2b3f3-7ff5-44ef-a529-595fbcd81f1b">codesandbox</a>
-          demo (Also used an automated cypress test, test testing all the codesandbox demos).
+          demo (also used an automated cypress test, to test all the codesandbox demos).
         </p>
 
         <p>Make no mistake about it orchestrating a set of standalone tools to manage collections of independently
@@ -625,6 +643,9 @@
           better understanding of the implications you can review the <a
             href="https://github.com/codylindley/locuslabs-component-driven-system">monorepo for the LocusLabs
             components</a>.</p>
+
+        <p>Below are a list of the tools that were used to orchestrate the development, management, testing, and
+          distribution of LocusLabs UI components:</p>
 
         <p><strong>Design System, Feature Specifications, Component Specifications</strong></p>
 
