@@ -850,7 +850,7 @@
         <h3>Application Runtime</h3>
 
         <p>When the source code for an application is executed and the application is running (e.g., if you use React
-          then the runtime is when the web platform takes your built code and runs it to produce a running application
+          then the runtime is when the web platform takes source code and runs it to produce a running application
           in a web browser).</p>
 
         <h3>Bottom-up Components</h3>
@@ -958,34 +958,41 @@
 
         <h2>FAQ</h2>
 
-        <h3>Wait, are you asserting that each product/application would have its own collection of components?</h3>
+        <h3>Can you just give me the TLTR</h3>
+
+        <p>Component-driven software is software the is built from independently specified, built, versioned,
+          documented, and tested components using a component-driven system.</p>
+
+        <h3>Wait, are you asserting that each product/application would have its own unique collection of components?
+        </h3>
 
         <p>Yes. This exactly the notion at the heart of component-driven software by way
           of a component-driven
           system. It is my belief that a general consensus is being reached among professionals in this space that the
           idea of a single generic top-down set of components as a system of reuse and visual
-          normalization is mostly a failed endeavor with a limited use case. If you have only one product/application
+          normalization tool is mostly a failed endeavor with a limited use case. If you have only one
+          product/application
           then yes created a single collection of components for the context. But, the notion that a generic top-down
           collection of components can be used to build out multiple applications/products today and in the future
           is a flawed idea in practice. It almost always fails unless what you really require in the finished product is
           a general and generic application built from general and generic design patterns.
         </p>
 
-        <h3>Isn't this just window dressing around the idea of leveraging UI Toolkits?</h3>
+        <h3>Isn't this just window dressing around the idea of leveraging generic UI Toolkits?</h3>
 
         <p>
           If your organization has the luxury (few do) of building software from a slightly customizable off-the-shelf
-          UI toolkit,
+          generic UI toolkit (be internally built or from a thirdparty),
           then you have already surrendered the UI to a generalized set of top-down components that come with
-          pre-determined
+          pre-determined locked
           features, behaviors, and interactions.
         </p>
 
         <p>
-          Suppose a product owner determines they will build an application with something like <a
+          Suppose it is determined that an application will be built with something like <a
             href="https://material-ui.com/">Material-UI components</a>;
-          they have
-          in many ways already determined the features of the components that can be used to solve UI problems. They
+          this decision
+          in many ways determines the features of the application that can be used to solve UI problems. They
           have forced
           the hands of the designers as well as the application developers because by adopting pre-built components,
           they have
@@ -1000,8 +1007,11 @@
         <p>
           Does this mean that all components in a component-driven system are custom built from the ground up. No!
           However, it
-          does mean that if you are borrowing something from a third-party, then you should wrap it up in a custom
-          component so
+          does mean that if you are borrowing something from a third-party, <a
+            href="https://github.com/codylindley/locuslabs-component-driven-system/blob/master/ui_components/VMS/primitive-components/select/index.js#L344">then
+            you should wrap</a> it up in a <a
+            href="https://codylindley.github.io/locuslabs-storybook/?path=/docs/vms-components-primitive-components-select--default#component-props">custom
+            component</a> so
           that the details of the implementation are abstracted.
         </p>
 
