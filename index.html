@@ -119,20 +119,21 @@
 
         <h2>2 : Component-driven Software Tenants</h2>
 
-        <p>There is no one way to go about doing component-driven software or constructing a component-driven system.
-          No two organizations are exactly alike, with the same problems and goals. Thus, no two organizations will
-          erect
-          the same component-driven
-          system. This makes prescribing any single canonical component-driven system difficult. However, there are
-          some foundational tenets of building component-driven software which component-driven systems will
-          commonly embody.</p>
+        <p>There is no one way to go about doing component-driven software or constructing a component-driven system. No
+          two
+          organizations are exactly alike, and as such, no two organizations will solve the same problems in the same
+          way. Thus,
+          no two organizations will erect the same component-driven system. This makes prescribing any single canonical
+          component-driven system complicated. However, there are some foundational tenets of building component-driven
+          software
+          which component-driven systems will commonly embody.</p>
 
         <p>Common tenets of a component-driven system are:</p>
 
         <ul>
           <li>Components get developed in isolation, tested in isolation, and are <a
               href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
-            versioned using semver.
+            versioned using <a href="https://semver.org/">semantic versioning</a>.
           </li>
           <li>Components become individual packages and get distributed using a public or private module repository
             (e.g., npm) for installing and uninstalling versioned module packages.</li>
@@ -150,12 +151,15 @@
             separately as component specifications.</li>
           <li>Components are viewed as a game of composition. When components, especially bottom-up UI components, are
             view in
-            this way application developers can build the bulk of an application from custom pre-built, heavily
-            documented, and pre-test UI components that have fallen out of traditional UI mockups/screens and business
+            this way application developers can build the bulk of an application from <a
+              href="https://codylindley.github.io/locuslabs-storybook/?path=/story/mol-components-desktop-domain-components-building-level-selector--with-selected-building">precisely
+              pre-built, heavily
+              documented, and pre-test UI components</a> that have fallen out of traditional UI mockups/screens and
+            business
             requirements. </li>
         </ul>
 
-        <p>Disregarding one of the tenets mentioned above will erode the value of component-driven systems relatively
+        <p>Disregarding one of the tenets mentioned above will erode the value of a component-driven systems relatively
           quickly.</p>
 
       </div>
@@ -178,12 +182,12 @@
 
         <p>
           Before adopting component-driven software practices, an organization should get all the stakeholders in
-          alignment
+          alignment (i.e., Product, Design, Engineer)
           on the
           goals of adopting such a methodology. Start by prioritizing a list of goals
           and
           then make
-          decisions based on the list.
+          strategic & architectural decision's based on the list of goals.
         </p>
 
         <p><strong>What are your goals:</strong>
@@ -204,8 +208,8 @@
           Do you need top-down components, bottom-up, or both?
           Will you build UI components and nonpresentational components? Will you build primitive UI
           components as well as domain UI components. How will you organize your component sets? By product/application?
-          By device? By platform? By all three? Is a Design System being leveraged? How does the Design System
-          integrate? Will the component sets need to be
+          By device? By platform? By all three? Is a Design System required? How does the Design System
+          fuel the components? Will the component sets need to be
           themeable?
         </p>
 
@@ -358,8 +362,11 @@
 
         <h3>4.1 : Overview</h3>
 
-        <p>In March 2020, I was hired by the CTO and VP of Product from LocusLabs to orchestrate a component-driven
-          software practice. What is described below is the component-driven system I built for Locuslabs.</p>
+        <p>In March 2020, I was hired by the <a href="https://www.linkedin.com/in/jeff-goldberg-814828/">CTO</a> and <a
+            href="https://www.linkedin.com/in/jmcminn/">VP of Product</a> from LocusLabs to orchestrate a
+          component-driven
+          software practice with the <a href="https://www.linkedin.com/in/sam-atmore/">design lead</a>. What is
+          described below is the component-driven system we built for Locuslabs.</p>
 
         <div class="notes">
 
@@ -388,7 +395,7 @@
 
         <h3>4.2 : Goals</h3>
 
-        <p>The leadership from design and engineering
+        <p>The leadership from product, design, and engineering
           agreed on the following component-driven goals:</p>
 
         <ol>
@@ -406,7 +413,7 @@
 
         <h3>4.3 : Strategies & Architectures</h3>
 
-        <p>The following strategy and component architecture was agreed upon by all parties involved so that the
+        <p>The following strategies and component architecture were agreed upon by all parties involved so that the
           component-driven goals could be achieved:</p>
 
         <ul>
@@ -463,7 +470,8 @@
         <p>Laboring an agreed upon strategy and architecture was not an easy feat. It took weeks of conversations and
           focusing on the goals to arrive at an agreed upon idea of what to build.</p>
 
-        <p>Below are a few of the diagrams that were used when discussing the correct components strategy and
+        <p>Below are a few of the diagrams that were used when discussing and settling on the correct component strategy
+          and
           architecture:</p>
 
         <div class="images">
@@ -617,6 +625,12 @@
           better understanding of the implications you can review the <a
             href="https://github.com/codylindley/locuslabs-component-driven-system">monorepo for the LocusLabs
             components</a>.</p>
+
+        <p><strong>Design System, Feature Specifications, Component Specifications</strong></p>
+
+        <ul>
+          <li><a href="https://www.figma.com/">Figma</a></li>
+        </ul>
 
         <p><strong>CI/CD</strong></p>
 
