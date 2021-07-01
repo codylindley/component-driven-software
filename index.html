@@ -39,7 +39,7 @@
       <h3 style="margin-top:0px"><a href="http://www.componentdrivensoftware.com/">componentdrivensoftware.com</a> by <a
           href="http://www.codylindley.com">Cody Lindley</a></h3>
       <section>
-        Component Driven Software is a catch-all term used to describe the methodologies and tools for subdividing part
+        Component-driven Software is a catch-all term used to describe the methodologies and tools for subdividing part
         or all of an application into <a href="https://en.wikipedia.org/wiki/Composability">composable</a> <a
           href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independently</a>
         specified and managed presentational (i.e., UI components) and
@@ -56,12 +56,11 @@
 
         <p>The following bullet points broadly explain why an organization might consider using a component-driven
           system and building
-          component
-          driven software:</p>
+          component-driven software:</p>
 
         <ul>
           <li>
-            Applications built from component tree architectures (e.g., Vue, React, Angular, etc) can result in
+            Applications built from component tree architectures (e.g., Vue, React, Angular, etc.) can result in
             thousands of un-versioned built-as-needed undocumented and disorganized components resulting in monolithic
             front-end applications that are slow to build, have subpar UI's, have tightly coupled components, and are
             often difficult to maintain and scale. Ideally, what is needed is a system in which most if not all the
@@ -69,10 +68,11 @@
             isolation, self-contained, versioned, and given the proper documentation and isolated testing routines.
           </li>
           <li>
-            Front-end applications as of late are being development by developers who are responsible for architecting
-            the application, handling data retrieval, handling global state
-            concerns, as well as constructing and testing all components within the applicaiton (including UI
-            components). Front-end application developers
+            Front-end applications, as of late, are being developed by developers who are responsible for architecting
+            the
+            application, handling data retrieval, handling global state concerns, as well as constructing and testing
+            all components
+            within the application (including UI components). Front-end application developers
             carry too much
             workload when building user-centered, maintainable, cross-device, cross-platform, front-end
             applications—this workload
@@ -92,24 +92,24 @@
           <li>
             Organizations all too often fail to set up the proper systems and owners around design practices and
             development practices that facilitate sophisticated abstractions and correctly scoped reusable materials.
-            Ideally, organizations should erect "Design System(s)" that fuel a "Component Driven System" that fuels
+            Ideally, organizations should erect "Design System(s)" that fuel a "Component-driven System" that fuels
             application development. These solutions require appropriately skilled owners that play a particular role
             within an organization's design and engineering practices.
           </li>
           <li>
-            Organizations looking to separate their design system from implementations (e.g., <a
+            Organizations who are looking to separate their design system from implementations (e.g., <a
               href="https://spectrum.adobe.com/">Adobe Spectrum</a> is a design system, <a
               href="https://react-spectrum.adobe.com/">Adobe React Spectrum</a> is an implementation).
           </li>
           <li>
-            Organizations have realized or felt the empty promises of top down components and seek a solution to build
+            Organizations have realized or felt the empty promises of top-down components and seek a solution to build
             applications with bottom-up domain (complex) and primitive (simple) components instead of premature generic
             components that
             have
-            too wide of a purpose and api surfaces due to crosscutting concerns.
+            too wide of a purpose and API surfaces due to crosscutting concerns.
           </li>
           <li>Organizations know the value of back-end and front-end micro-series that separate applications into
-            multiple isolated applications and and want continue this trend by breaking an application
+            multiple isolated applications and want continue this trend by breaking an application
             into isolated independent components.</li>
         </ul>
 
@@ -148,7 +148,7 @@
             a component, not the component itself.</li>
           <li>UI components are extracted from feature specifications by designers (worse case developers) and specified
             separately as component specifications.</li>
-          <li>Components are viewed as a game of composition. When components, especially bottom-up UI components are
+          <li>Components are viewed as a game of composition. When components, especially bottom-up UI components, are
             view in
             this way application developers can build the bulk of an application from custom pre-built, heavily
             documented, and pre-test UI components that have fallen out of traditional UI mockups/screens and business
@@ -177,16 +177,16 @@
         <h3>3.1 : Goals</h3>
 
         <p>
-          Before adopting component driven software practices an organization should get all the stakeholders in
+          Before adopting component-driven software practices, an organization should get all the stakeholders in
           alignment
           on the
           goals of adopting such a methodology. Start by prioritizing a list of goals
           and
           then make
-          decisions based off the list.
+          decisions based on the list.
         </p>
 
-        <p><strong>What are you goals:</strong>
+        <p><strong>What are your goals:</strong>
           Speed development? Fortify the quality of the user interface and the user experience? Reuse? Visual
           unification? Behavioral Unification? Experiential Unification?
           Separate application development from UI development? Avoid monolithic unmaintainable applications that have
@@ -195,7 +195,7 @@
 
         <h3>3.2 : Strategies & Architectures</h3>
 
-        <p>After an organization has a set of priorities goals it will then need to use these goals to decide upon a
+        <p>After an organization has a set of priorities goals, it will then need to use these goals to decide upon a
           component
           strategy and
           architecture.</p>
@@ -211,7 +211,7 @@
 
         <h3>3.3 : Roles & Processes & Assets</h3>
 
-        <p>With a set of goals and a component strategy & architecture defined the design and engineering groups will
+        <p>With a set of goals and a component strategy & architecture defined, the design and engineering groups will
           next
           have
           to determine a design and development process for building independent components.</p>
@@ -231,29 +231,30 @@
         <h3>3.4 : Tools</h3>
 
         <p>The last part of a component-driven system will involve selecting a set of tools and then implementing the
-          tools so that independent components can be built, maintained, and shared within an organization.
-          These
-          tools can be divided into three catagories, "Design Tools",
-          "Component Tools", and "Development Tools".</p>
+          tools so that
+          independent components can be built, maintained, and shared within an organization. These tools can be divided
+          into
+          three categories, "Design Tools," "Component Tools," and "Development Tools."</p>
 
         <p><strong>Design Tools:</strong></p>
 
         <p>Various design tools are available for specifying components and developing/managing design systems. I'd
-          mention several options except that in my opinion Figma is the obvious choice for supporting component driven
-          systems.
+          mention several
+          options except that, in my opinion, Figma is the obvious choice for supporting component-driven systems. Here
+          is why:
 
           Here is why:</p>
 
         <ul>
           <li>
-            Figma files can be embedded into component driven systems (e.g., using the <a
+            Figma files can be embedded into component-driven systems (e.g., using the <a
               href="https://storybook.js.org/addons/storybook-addon-designs/">Storybook Designs addon</a> you can add
             Figma for display directly when storybook when viewing a component)
           </li>
           <li>Figma has inline commenting/feedback system.</li>
-          <li>Figma allows more than one editor at a time which facilitates realtime collaborations</li>
+          <li>Figma allows more than one editor at a time, which facilitates real-time collaborations.</li>
           <li>Figma offers a rich set of features and plugins for authors of Design Systems.</li>
-          <li>Figma is web based.</li>
+          <li>Figma is web-based.</li>
         </ul>
 
         <p><strong>Component Tools:</strong></p>
@@ -263,7 +264,8 @@
             href="https://vuetifyjs.com/">Vuetify</a>), Angular (e.g., <a href="https://material.angular.io/">Material
             Angular</a>), Web Components (e.g., <a href="https://shoelace.style/">shoelace</a>), or HTML & CSS (e.g., <a
             href="https://opensource.adobe.com/spectrum-css/">Spectrum CSS</a>).
-          Depending upon which tool you use each come with a vast ecosystem of sub-tools, communities, and plugins.</p>
+          Depending upon which tool you use, each comes with a vast ecosystem of sub-tools, communities, and plugins.
+        </p>
 
         <p><strong>Development Tools:</strong></p>
 
@@ -271,7 +273,7 @@
             href="https://blog.bitsrc.io/independent-components-the-webs-new-building-blocks-59c893ef0f65">independent
             components</a>.</p>
 
-        <p>The first path entails using a tailored conglomeration of distinctly different tools that as a whole will
+        <p>The first path entails using a tailored conglomeration of distinctly different tools that, as a whole, will
           provide the means to
           create and distribute independent components using a <a
             href="https://en.wikipedia.org/wiki/Monorepo">monorepo.</a>
@@ -307,14 +309,14 @@
           </li>
         </ul>
 
-        <p>The second path would be to use an off the shelf, all in one tool, constructed precisely for building
+        <p>The second path would be to use an off-the-shelf, all-in-one tool constructed precisely for building
           component-driven
           software. <a href="https://harmony-docs.bit.dev/essentials/what-is-bit">Bit</a> (specifically <a
             href="https://harmony-docs.bit.dev/">Bit Harmony</a>)
           is currently the only product offering
           in
           this space that does
-          most of what option one does but offers it as a product/solution with enterprise features. I like to
+          most of what option one offers but with enterprise features. I like to
           think of Bit as a node app
           that can replace the majority of the tools from the previous path mentioned but with the added bonus of <a
             href="https://bit.dev/">Bit.dev</a>. Bit.dev is
@@ -330,19 +332,19 @@
           <li>
             Bit will version not just every release of the component itself (i.e. an npm sermver) but also the
             historical artifacts that
-            supports the component (e.g., source code, builds, compositions, logs, docs, etc...). In a sense, Bit
+            support the component (e.g., source code, builds, compositions, logs, docs, etc...). In a sense, Bit
             Harmony is a content versioning system for independent
-            components. Bit manages development history and it allows you to go back in time and review previous
+            components. Bit manages development history, and it allows you to go back in time and review previous
             versions of the
             component package.
           </li>
           <li>Bit conceals the complexities of Yarn workspaces, Lerna, Babel, npm, and build tools.</li>
           <li>Bit offers Bit.dev, a place to immediately host, share, and collaborate on components.</li>
-          <li>Bit works with presentational components as well as non-presentational components. In other words it does
+          <li>Bit works with presentational components as well as non-presentational components. In other words, it does
             not assume you only want to build UI components.</li>
           <li>Bit <a href="https://harmony-docs.bit.dev/aspects/dependency-resolver/">handles the dependencies</a> for
             independent components.</li>
-          <li>Bit, if fully adopted (i.e. bit.dev workspaces) can also continuously release a component to anyone who
+          <li>Bit, if fully adopted (i.e., bit.dev workspaces) can also continuously release a component to anyone who
             consumes/composes it via
             Bit.dev</li>
         </ol>
@@ -356,8 +358,8 @@
 
         <h3>4.1 : Overview</h3>
 
-        <p>In March 2020 I was hired by the CTO and VP of Product from LocusLabs to orchestrate a component driven
-          software practice. What is describe below is the component driven system I built for Locuslabs.</p>
+        <p>In March 2020, I was hired by the CTO and VP of Product from LocusLabs to orchestrate a component-driven
+          software practice. What is described below is the component-driven system I built for Locuslabs.</p>
 
         <div class="notes">
 
@@ -366,7 +368,7 @@
           </p>
           <ol>
             <li>
-              As you read this use case keep in mind that the decisions for the system were unique to LocusLabs. Note
+              As you read this use case, keep in mind that the decisions for the system were unique to LocusLabs. Note
               that
               LocusLabs built several different types of applications running
               on various devices (Kiosks, Large Displays, Desktops & Laptops, Tablets, and Mobile phones) used or viewed
@@ -376,7 +378,8 @@
               desktop/laptop mouse users, mobile phone touch users).
             </li>
             <li>The system built for Locuslabs is not a general
-              prescription for other organization. Use this use case as an example of the scope and practice of creating
+              prescription for other organizations. Use this use case as an example of the scope and practice of
+              creating
               component-driven systems.</li>
           </ol>
         </div>
@@ -395,7 +398,7 @@
           </li>
           <li>Have UI integrity (visual design, behavior design, interaction design) baked into the components before
             they are implemented.</li>
-          <li>Speed the development and UI quality of products/applications by creating a new engineering group who
+          <li>Speed the development and UI quality of products/applications by creating a new engineering group that
             focused on the
             development and testing of UI components that had been specified in detail by the design team using
             component specifications.</li>
@@ -420,7 +423,7 @@
             that can be overridden (i.e. customizable design tokens from the design system).</li>
         </ul>
 
-        <p>An example collection of components for a product called, "Maps Online" would be:</p>
+        <p>An example collection of components for a product called "Maps Online" would be:</p>
 
 
         <ul>
@@ -487,7 +490,7 @@
 
         <p>A new engineering group was formed within the LocusLabs made up of two full-time
           front-end UI
-          engineers and one front-end UI engineer lead. The team was called the, "UI Component Dev Team". The lead
+          engineers and one front-end UI engineer lead. The team was called the "UI Component Dev Team". The lead
           worked with design to build out a component-driven
           process and a component specification template that would produce a collection of bottom-up components for
           each
@@ -563,7 +566,9 @@
           each
           component using the tools decided upon by the teams lead UI engineer:</p>
 
-        <p>For example here is the built domain building level selector component inside of Storybook:</p>
+        <p>For example here is the built <a
+            href="https://codylindley.github.io/locuslabs-storybook/?path=/story/mol-components-desktop-domain-components-building-level-selector--with-selected-building">domain
+            building level selector component</a> inside of Storybook:</p>
 
         <div class="images">
 
@@ -584,8 +589,31 @@
         <h3>4.5 : Tools</h3>
 
 
-        <p>Below are a list of the tools that were used to facilitated the development, management, testing, and
+        <p>Below are a list of the tools that were used to orchestrate the development, management, testing, and
           distribution of LocusLabs UI components:</p>
+
+        <p>Briefly, components were developed, documented, and shared using <a
+            href="https://codylindley.github.io/locuslabs-storybook/?path=/story/ui-component-system-overview-introduction--page">Storybook</a>
+          from a monorepo (i.e. <a href="https://classic.yarnpkg.com/en/docs/workspaces/">yarn workspaces</a>) that
+          housed
+          all the <a href="https://www.npmjs.com/search?q=%40locus-labs">npm component packages</a>. Component stories
+          within
+          storybook were considered test cases for the components interface (i.e., React props) and "tests cases" were
+          verified using <a href="https://docs.percy.io/docs/storybook">Percy</a> and <a
+            href="https://github.com/NicholasBoll/cypress-storybook">Cypress</a> storybook plugins via Gitlabs
+          CI/CD automation tools (e.g., visual testing and functional testing on every commit to a development branch in
+          Git). Components
+          were individually distributed to application developers from <a
+            href="https://www.npmjs.com/search?q=%40locus-labs">the npm registry</a> with the help of Lerna. Once a
+          component was available from the npm registry the documentation pages for each component would verify the
+          components basic usage via <a
+            href="https://codesandbox.io/dashboard/all/?workspace=a1d2b3f3-7ff5-44ef-a529-595fbcd81f1b">codesandbox</a>
+          demo (Also used an automated cypress test, test testing all the codesandbox demos).
+        </p>
+
+        <p>Make no mistake about it orchestrating a set of standalone tools to manage collections of independently
+          version
+          components as well as defining how components are built, documented, and tested is no trivial matter.</p>
 
         <p><strong>CI/CD</strong></p>
 
@@ -660,7 +688,7 @@
           <li data-sourcepos="74:1-75:0"><a href="https://polished.js.org/">Polished</a></li>
         </ul>
 
-        <p><strong>Documentation</strong></p>
+        <p><strong>Documentation & Demos</strong></p>
 
         <ul data-sourcepos="78:1-81:0" dir="auto">
           <li data-sourcepos="78:1-78:90">
@@ -671,6 +699,7 @@
               href="https://codesandbox.io/dashboard/all/?workspace=a1d2b3f3-7ff5-44ef-a529-595fbcd81f1b">codesandbox.com</a>
           </li>
           <li data-sourcepos="80:1-81:0"><a href="https://shields.io/category/version">shields.io</a></li>
+          <li data-sourcepos="80:1-81:0"><a href="https://npmfs.com/">npmfs.com</a></li>
         </ul>
 
         <p><strong>Testing & Quality</strong></p>
@@ -694,9 +723,6 @@
             </ul>
           </li>
         </ul>
-
-        <p>Make no mistake about it arranging a set of standalone tools to manage collections of independently version
-          components as well as defining how components are built, documented, and tested is no small feat.</p>
 
       </div>
 
@@ -745,7 +771,11 @@
 
         <h3>Examples of bottom-up component collections</h3>
 
-        ?
+        <ul>
+          <li><a
+              href="https://codylindley.github.io/locuslabs-storybook/?path=/story/ui-component-system-overview-introduction--page">LocusLabs
+              Storybook (Note: houses four bottom up component sets)</a></li>
+        </ul>
 
         <h3>Articles</h3>
 
@@ -892,8 +922,8 @@
 
         <h3>Wait, are you asserting that each product/application would have its own collection of components?</h3>
 
-        <p>Yes. This exactly the notion at the heart of component driven software by way
-          of a component driven
+        <p>Yes. This exactly the notion at the heart of component-driven software by way
+          of a component-driven
           system. It is my belief that a general consensus is being reached among professionals in this space that the
           idea of a single generic top-down set of components as a system of reuse and visual
           normalization is mostly a failed endeavor with a limited use case. If you have only one product/application
@@ -957,7 +987,7 @@
           components consume a Design System.</p>
 
         <p>Don't conflate a design system with an implementation fueled by a Design system. Design systems end where
-          implementations and component driven systems begin.</p>
+          implementations and component-driven systems begin.</p>
 
         <h3>Is this just another name for a "Micro Frontend"?</h3>
 
@@ -987,7 +1017,7 @@
 
         <p>In many ways, a proper Design System has replaced the need to think in terms of Atomic Design. A Design
           System properly fueling a component-driven system (via component specifications) should be all that is needed
-          today. But make no mistake about it, Atomic Designed paved the way for Design Systems and Component Driven
+          today. But make no mistake about it, Atomic Designed paved the way for Design Systems and Component-Driven
           Software.</p>
 
       </div>
