@@ -62,7 +62,7 @@
         <ul>
           <li>
             Applications built from component tree architectures (e.g., Vue, React, Angular, etc) can result in
-            thousands of unversioned built-as-needed undocumented and disorganized components resulting in monolithic
+            thousands of un-versioned built-as-needed undocumented and disorganized components resulting in monolithic
             front-end applications that are slow to build, have subpar UI's, have tightly coupled components, and are
             often difficult to maintain and scale. Ideally, what is needed is a system in which most if not all the
             components, especially UI components, become first-class citizens that are constructed in
@@ -396,13 +396,12 @@
 
         <h3>4.3 : Strategies & Architectures</h3>
 
-        <p>The leadership from design and engineering determined the following strategy and component architecture to
-          meet the
-          agreed upon goals:</p>
+        <p>The following strategy and component architecture was agreed upon by all parties involved so that the
+          component-driven goals could be achieved:</p>
 
         <ul>
-          <li>Build bottom-up independent stateless UI React components (individually versioned and installed) for each
-            product/application.</li>
+          <li>Build bottom-up stateless UI React components for each
+            product/application (individually versioned and packaged).</li>
           <li>Each product/application would use its own design system.</li>
           <li>The component collections will be organized by product > device (optional) > composability (primitive v.s.
             domain).</li>
@@ -451,7 +450,7 @@
         </ul>
 
 
-        <p>Laboring an agreed upon strategy and architecture was not easy feat. It took weeks of conversations and
+        <p>Laboring an agreed upon strategy and architecture was not an easy feat. It took weeks of conversations and
           focusing on the goals to arrive at an agreed upon idea of what to build.</p>
 
         <p>Below are a few of the diagrams that were used when discussing the correct components strategy and
