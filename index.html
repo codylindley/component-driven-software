@@ -76,9 +76,10 @@
             carry too much
             workload when building user-centered, maintainable, cross-device, cross-platform, front-end
             applications—this workload
-            results in long, complicated development cycles. Application developers
+            results in long, complicated development cycles. Application developers simply
             have too
-            many responsibilities when building nontrivial applications. As a result, component management (especially
+            many responsibilities when it comes to building nontrivial applications. As a result, component management
+            (especially
             UI components) can become a
             second-class citizen or afterthought to application
             developers.
@@ -96,18 +97,19 @@
             within an organization's design and engineering practices.
           </li>
           <li>
-            Organizations are looking to separate their design system from implementations (e.g., <a
+            Organizations looking to separate their design system from implementations (e.g., <a
               href="https://spectrum.adobe.com/">Adobe Spectrum</a> is a design system, <a
               href="https://react-spectrum.adobe.com/">Adobe React Spectrum</a> is an implementation).
           </li>
           <li>
             Organizations have realized or felt the empty promises of top down components and seek a solution to build
-            applications with bottom-up domain and primitive components instead of premature generic components that
+            applications with bottom-up domain (complex) and primitive (simple) components instead of premature generic
+            components that
             have
-            too wide of an api surfaces due to crosscutting concerns.
+            too wide of a purpose and api surfaces due to crosscutting concerns.
           </li>
-          <li>Organizations have felt the value of back-end and front-end micro-series that seperate applications into
-            multiple isolated applications and and want continue this trend by breaking up the applications themselves
+          <li>Organizations know the value of back-end and front-end micro-series that separate applications into
+            multiple isolated applications and and want continue this trend by breaking an application
             into isolated independent components.</li>
         </ul>
 
@@ -324,19 +326,21 @@
         <ol>
           <li>
             Bit will version not just every release of the component itself (i.e. an npm sermver) but also the
-            collateral that
-            supports the component (e.g., demos, docs, etc...). In a sense, Bit Harmony is Git for independent
-            components. Bit manages development history and it allows you to go back in time and review the
-            documentation, compositions (i.e. stories), tests, and dependencies from previous versions of the
-            components.
+            historical artifacts that
+            supports the component (e.g., source code, builds, compositions, logs, docs, etc...). In a sense, Bit
+            Harmony is a content versioning system for independent
+            components. Bit manages development history and it allows you to go back in time and review previous
+            versions of the
+            component package.
           </li>
           <li>Bit conceals the complexities of Yarn workspaces, Lerna, Babel, npm, and build tools.</li>
-          <li>Bit offers Bit.dev, a place to immediately host and share your components with ease.</li>
+          <li>Bit offers Bit.dev, a place to immediately host, share, and collaborate on components.</li>
           <li>Bit works with presentational components as well as non-presentational components. In other words it does
             not assume you only want to build UI components.</li>
           <li>Bit <a href="https://harmony-docs.bit.dev/aspects/dependency-resolver/">handles the dependencies</a> for
             independent components.</li>
-          <li>Bit, if fully adopted can also continuously release a component to anyone who consumes/composes it via
+          <li>Bit, if fully adopted (i.e. bit.dev workspaces) can also continuously release a component to anyone who
+            consumes/composes it via
             Bit.dev</li>
         </ol>
 
